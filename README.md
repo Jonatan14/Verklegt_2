@@ -1,2 +1,2 @@
 # Verklegt_2
-Hér er smá read me file fyrir vel valda aðila
+Bleeding edge big data cloud based next-gen web IOT collaborative programming solution!
