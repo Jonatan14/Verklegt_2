@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "TextEditor";
+}
+<script src="~/Scripts/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    window.onload = function() {
+        var editor = ace.edit("editor");
+    };
+</script>
+<h2>TextEditor</h2>
+
+<div id="editor"><%=Model.Editor %></div>
