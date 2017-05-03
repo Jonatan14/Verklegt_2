@@ -29,5 +29,7 @@ namespace PoP.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<PoP.Models.ApplicationUser> ApplicationUsers { get; set; }
     }
 }

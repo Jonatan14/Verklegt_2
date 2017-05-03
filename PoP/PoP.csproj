@@ -197,6 +197,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MainController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\TextEditorController.cs" />
     <Compile Include="Global.asax.cs">
@@ -626,6 +627,11 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\TextEditor\index.cshtml" />
+    <Content Include="Views\Main\Create.cshtml" />
+    <Content Include="Views\Main\Delete.cshtml" />
+    <Content Include="Views\Main\Details.cshtml" />
+    <Content Include="Views\Main\Edit.cshtml" />
+    <Content Include="Views\Main\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
