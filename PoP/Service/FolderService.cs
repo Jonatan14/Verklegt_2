@@ -8,20 +8,19 @@ namespace PoP.Service
 {
 	public class FolderService
 	{
-		private FolderModel folder;
+		private FolderModel folder = null;
 
 		public FolderModel getFolder(int id)
 		{
-			FolderModel result = null;
-
-			return result;
+			return folder;
 		}
+
 		public FolderModel updateFolder(FolderModel file)
 		{
-			FolderModel result = null;
 
-			return result;
+			return folder;
 		}
+
 		public List<FolderModel> filesInDirector(int id)
 		{
 			List<FolderModel> result = null;
