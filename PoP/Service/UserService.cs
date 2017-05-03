@@ -5,11 +5,12 @@ using System.Web;
 
 namespace PoP.Service
 {
-    public class UserService
-    {
-        public List<>getUserId(int ID)
-        {
-
-        }
-    }
+	public class UserService
+	{
+		public int getUserId(string username)
+		{
+			//TODO: returna id ekki 0. Er bara placeholder
+			return 0;
+		}
+	}
 }
