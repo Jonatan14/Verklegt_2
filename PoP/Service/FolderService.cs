@@ -6,8 +6,8 @@ using System.Web;
 
 namespace PoP.Service
 {
-    public class FolderService
-    {
+	public class FolderService
+	{
 		private FolderModel folder;
 
 		public FolderModel getFolder(int id)
@@ -27,5 +27,5 @@ namespace PoP.Service
 			List<FolderModel> result = null;
 			return result;
 		}
-    }
+	}
 }
