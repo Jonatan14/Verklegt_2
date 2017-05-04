@@ -3,6 +3,7 @@
     ViewBag.Title = "TextEditor";
 }
 <script src="~/Scripts/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+
 <script>
     window.onload = function() {
         var editor = ace.edit("editor");
@@ -10,4 +11,17 @@
 </script>
 <h2>TextEditor</h2>
 
-<div id="editor"><%=Model.Editor %></div>
+    <pre id="editor" style="height:100%">function foo(items) {
+        var i;
+        for (i = 0; i &lt; items.length; i++) {
+            alert("Ace Rocks " + items[i]);
+        }
+    }</pre>
+
+
+<script>
+    var editor = ace.edit("editor");
+
+    editor.setTheme("ace/theme/twilight");
+    editor.session.setMode("ace/mode/javascript");
+</script>
