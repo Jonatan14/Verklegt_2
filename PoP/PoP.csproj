@@ -228,6 +228,7 @@
     <Content Include="assets\css\images\poptrox-closer.svg" />
     <Content Include="assets\css\images\poptrox-nav.svg" />
     <Content Include="assets\css\main.css" />
+    <Content Include="assets\css\manualchange.css" />
     <Content Include="assets\fonts\fontawesome-webfont.svg" />
     <Content Include="assets\js\ie\backgroundsize.min.htc" />
     <Content Include="assets\js\ie\html5shiv.js" />
@@ -238,6 +239,7 @@
     <Content Include="assets\js\jquery.scrollex.min.js" />
     <Content Include="assets\js\jquery.scrolly.min.js" />
     <Content Include="assets\js\main.js" />
+    <Content Include="assets\js\manualjava.js" />
     <Content Include="assets\js\skel.min.js" />
     <Content Include="assets\js\util.js" />
     <Content Include="Content\bootstrap.css" />
