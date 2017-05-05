@@ -7,12 +7,15 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using PoP.Models;
+using PoP.Service;
 
 namespace PoP.Controllers
 {
     public class MainController : Controller
     {
-        private ApplicationDbContext db = new ApplicationDbContext();
+        
+        public FileService fileService = new FileService();
+        public FolderService Folder = new FolderService(); 
 
         // GET: Main
         public ActionResult Index()

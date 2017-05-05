@@ -6,7 +6,7 @@ using PoP.Models;
 
 namespace PoP.Service
 {
-    public class FileService
+    public class FileService  
     {
         private FileModel file = null;
 
