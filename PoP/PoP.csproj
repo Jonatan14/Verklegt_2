@@ -635,6 +635,15 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="assets\css\images\" />
+    <Folder Include="assets\fonts\" />
+    <Folder Include="assets\js\ie\" />
+    <Folder Include="assets\sass\base\" />
+    <Folder Include="assets\sass\components\" />
+    <Folder Include="assets\sass\layout\" />
+    <Folder Include="assets\sass\libs\" />
+    <Folder Include="images\fulls\" />
+    <Folder Include="images\thumbs\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
