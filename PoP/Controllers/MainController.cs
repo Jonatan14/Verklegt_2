@@ -13,9 +13,8 @@ namespace PoP.Controllers
 {
     public class MainController : Controller
     {
-        
-        public FileService fileService = new FileService();
-        public FolderService Folder = new FolderService(); 
+
+        private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Main
         public ActionResult Index()
