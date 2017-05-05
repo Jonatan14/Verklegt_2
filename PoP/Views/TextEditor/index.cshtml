@@ -1,23 +1,25 @@
 ﻿
 @{
-    ViewBag.Title = "TextEditor";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<script src="~/Scripts/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<html>
+    <body>
 
+    </body>
+</html>
+<script src="~/Scripts/ace/ace.js" type="text/javascript" charset="utf-8"></script>
 <script>
     window.onload = function() {
         var editor = ace.edit("editor");
     };
 </script>
 <h2>TextEditor</h2>
-
-    <pre id="editor" style="height:100%; margin:50px 0 0 0;">function foo(items) {
-        var i;
+<pre id="editor" style="height:100%; margin:50px 0 0 0;">function foo(items) {
+            var i;
         for (i = 0; i &lt; items.length; i++) {
             alert("Ace Rocks " + items[i]);
         }
     }</pre>
-
 
 <script>
     var editor = ace.edit("editor");
