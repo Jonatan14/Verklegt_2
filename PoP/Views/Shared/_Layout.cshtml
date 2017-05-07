@@ -4,14 +4,20 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - PoP Program on PoP</title>
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="~/assets/css/main.css" />
+    <style type="text/css" media="screen">
+        #editor {
+           
+            height: 500px;
+        }
+    </style>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
 <body>
     <header id="header">
-        <h1>PoP</h1>
+        <img src="~/images/POPtransParent.png" width="70" height="40" />
         <nav>
             <ul>
                 <li>@Html.ActionLink("Home", "Index", "Home")</li>
@@ -21,6 +27,7 @@
             </ul>
         </nav>
     </header>
+   
     
     <div class="container body-content">
       @RenderBody()
@@ -39,6 +46,7 @@
             </ul>
         </footer>
     </div>
+    
     <script src="~/assets/js/jquery.min.js"></script>
     <script src="~/assets/js/jquery.poptrox.min.js"></script>
     <script src="~/assets/js/jquery.scrolly.min.js"></script>

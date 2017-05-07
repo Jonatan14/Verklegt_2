@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PoP.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,12 @@ namespace PoP.Controllers
         // GET: TextEditor
         public ActionResult Index()
         {
+            ViewBag.Code = "alert('Hallo World!');";
             return View();
+        }
+        public ActionResult SaveCode (EditorViewModel model)
+        {
+            return View("Index");
         }
     }
 }

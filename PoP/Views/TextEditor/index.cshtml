@@ -1,29 +1,32 @@
-﻿
+﻿@model PoP.Models.EditorViewModel
 @{
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "index";
 }
-<html>
-    <body>
 
-    </body>
-</html>
+<header id="haeder">
+
+</header>
+<div id="editor">
+ @ViewBag.Code
+</div>    
+
+@using (Html.BeginForm("SaveCode", "TextEditor", FormMethod.Post))
+{
+    @Html.HiddenFor(m => m.Content , new {@id = "hidden_editor" })
+    <input type="submit" value="Save Code" />
+
+}
+
+
+
+@section scripts{
 <script src="~/Scripts/ace/ace.js" type="text/javascript" charset="utf-8"></script>
 <script>
-    window.onload = function() {
-        var editor = ace.edit("editor");
-    };
-</script>
-<h2>TextEditor</h2>
-<pre id="editor" style="height:100%; margin:50px 0 0 0;">function foo(items) {
-            var i;
-        for (i = 0; i &lt; items.length; i++) {
-            alert("Ace Rocks " + items[i]);
-        }
-    }</pre>
-
-<script>
     var editor = ace.edit("editor");
-
-    editor.setTheme("ace/theme/twilight");
-    editor.session.setMode("ace/mode/javascript");
+    editor.setTheme("ace/theme/monokai");
+    editor.getSession().setMode("ace/mode/javascript");
+    $("form").submit(function () {
+        $("#hidden_editor").val(editor.getSession().getValue());
+    });
 </script>
+}
