@@ -10,7 +10,7 @@ namespace PoP.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            return RedirectToAction("Index", "Main");
         }
 
         public ActionResult About()

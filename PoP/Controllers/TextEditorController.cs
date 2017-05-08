@@ -13,6 +13,8 @@ namespace PoP.Controllers
         public ActionResult Index()
         {
             ViewBag.Code = "alert('Hallo World!');";
+            ViewBag.DocumentID = 1; // þarf að breita úr hardkóða í eitthvað sem nær í viðeigandi gögn í gagnagrun.
+
             return View();
         }
         public ActionResult SaveCode (EditorViewModel model)

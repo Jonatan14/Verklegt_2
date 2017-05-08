@@ -19,7 +19,7 @@ namespace PoP.Controllers
         // GET: Main
         public ActionResult Index()
         {
-            return View(db.ApplicationUsers.ToList());
+            return View();
         }
 
         // GET: Main/Details/5
