@@ -67,7 +67,7 @@
 	}
 
 	body {
-		background: #ffffff;
+		background-image:url("https://d1bd5g-ch3301.files.1drv.com/y4mVB2HZ_IDn0xuPYl066WA_t1pxaJ-diOt_ZIBVip16hMZlP7Luc_-HfK3Ne1aOY3-8EPw7mPtsis-P7tvbuXwKJPzq9dYPfRpvpE-LTJt37LKgSWXqjVIgw0KdMuwLanzYue9ZIZPqXQ08681x0fa8APt6IW0kqIBivyXiCTvCZoT2za2QlqpNuV6-AyKKUqOtuc5yOGCJRWFgNrtaS5NEQ?width=1400&height=788&cropmode=none");
 		height: 100%;
 		min-width: 320px;
 	}
@@ -1670,10 +1670,11 @@
 		left: 0;
 		top: 0;
 		width: 100%;
-		background: rgba(255, 255, 255, 0.95);
+		background: #b091eb;
 		height: 3em;
 		line-height: 3em;
 		box-shadow: 0 0 0.15em 0 rgba(0, 0, 0, 0.1);
+       
 	}
 
 		#header h1 {
@@ -1881,7 +1882,7 @@
 			}
 
 			.main.style3.primary {
-				background: #ffffff;
+				background-image:url("https://dvdiwg-ch3301.files.1drv.com/y4mFQbsqB1M4gvGz5zo5H1DTyC6DA3Vk40bfPLz_fZbajTn1TPUPn6f8yXru9ej_gR-KfLzlKPiKgRrRwWKKzRv0-2JqLYfQlmq_3ABW2C86TF5xGCkkw7cczNBKhvUD_IqnfIvmRzfJt-tckJQh-O6t7AUezUrDaWGLJoY-Taya6OgGmNbt5CGmN5_dwda7R82PGZeaKgvR6oF-N3FPrXhkA?width=1920&height=1200&cropmode=none");
 			}
 
 			.main.style3.secondary {
@@ -2093,7 +2094,7 @@
 /* Intro */
 
 	#intro {
-		background: url("images/overlay.png"), url("C:/Users/Alexander/Desktop/Verklegt_2/PoP/images/blackwood.jpg");
+		background: url("https://bvbd5g-ch3301.files.1drv.com/y4myfIDO4--3IoW3JwS_aqAEVM8oSPQWnnbKxsPitMyaaUyUsC6JQ774E4kX9LzStOZk811VPscLnGmRSiXQYFq3zX_mrNzS9FRIL602_-tM3ARvLHWHjPoL61Kf7XiWusvVRBqXsnTjt2PCxIsbV1ZTKdW0eAmlKkElXGYvX43nT0nHK_tJqszHfdNrIbXc27O66bY4OozEGCbzD7_x37paw?width=1400&height=715&cropmode=none");
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, bottom center;
@@ -2103,7 +2104,7 @@
 /* One */
 
 	#one {
-		background: url("images/overlay.png"), url("C:/Users/Alexander/Desktop/Verklegt_2/PoP/images/brownwood.jpg");
+		background: url("https://blbk5g-ch3301.files.1drv.com/y4maV-f2e-Dh7pFjcOBpaKexpsJmcvtzzMVqVq5HLaVAVroVrk9Pd0kjtA0p7bkbfxnzX7UghH2iXsxpRtUm4UyoKYCUlmsYh-nfU9trFgWeGw44eY3SGrWZ6Pzp2C5-qy5LRIWbKeMbkrlu1q5YBL8HPDTljMomsJX0KQAS2sk194KEd_h8RAg45OAHsGBVTYZHaWx4eybA6eYL2rIAZzP8Q?width=1400&height=736&cropmode=none");
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
@@ -2112,17 +2113,19 @@
 /* Two */
 
 	#two {
-		background: url("images/overlay.png"), url("../../images/two.jpg");
+        background: url("https://evdhwg-ch3301.files.1drv.com/y4mbtY7z9_z91qmA3JLQJNUvby8i6Y-Wj1kFdK93m0oBZjlfDdWqAx3ofjGVmoqXc6BooZ6Lb0p9w8bRkbhq035FwExXZ2KySJ-OWDtFU0N5ntDMT4B1g_QPbv15leUlLAUpCvFP1qm53eSGHLf_96bPeeQz2SlFpcgSXcr7tzTbzO2i6xENY5wt381R8Ee1ZAJ7RHWf-LgxBs9j6ZwUmZUjg?width=1920&height=1024&cropmode=none"); 
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
 	}
+   
 
 /* Contact */
 
 	#contact {
 		overflow: hidden;
 		padding-bottom: 0;
+        background-color: aliceblue;
 	}
 
 		#contact .box {

@@ -28,17 +28,11 @@
             <p>
                 Welcome to <strong>PoP</strong> Program on pop designed
                 by University students, built on steroids,
-                and released for free under the pressure by our evil teacher
+                and released for free under the pressure by our evil teacher 
             </p>
-            <form action="@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })">
-                <input type="submit" value="Register" />
-            </form>
-            
-      
-               
-            
-          
-          
+           
+                @Html.Partial("_LoginPartial")
+           
             <footer>
                 <a href="#one" class="button style2 down">More</a>
             </footer>
@@ -80,7 +74,7 @@
         <div class="content">
             <header>
                 <h2>My Work</h2>
-                <p>
+                <p style="text-decoration: solid">
                     Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
                     Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis
                     arcu, id varius justo euismod in. Curabitur egestas consectetur magna vitae.
