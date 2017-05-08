@@ -11,5 +11,6 @@ namespace PoP.Models
 		public string name { get; set; }
 		public int editedLast { get; set; } // date time!
 		public int ParentFolderID { get; set; } // ID of parent folder
+        public List<ApplicationDbContext> Folder;
 	}
 }

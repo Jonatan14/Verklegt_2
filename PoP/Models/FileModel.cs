@@ -12,5 +12,6 @@ namespace PoP.Models
         public string name { get; set; }
         public int version { get; set; }
         public int ParentFolderID { get; set; }
+        public List<ApplicationDbContext> File;
     }
 }

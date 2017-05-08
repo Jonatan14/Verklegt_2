@@ -1,5 +1,6 @@
 ﻿@model IEnumerable<PoP.Models.ApplicationUser>
 
+
 @{
     ViewBag.Title = "Index";
 }
@@ -29,6 +30,15 @@
                 by University students, built on steroids,
                 and released for free under the pressure by our evil teacher
             </p>
+            <form action="@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })">
+                <input type="submit" value="Register" />
+            </form>
+            
+      
+               
+            
+          
+          
             <footer>
                 <a href="#one" class="button style2 down">More</a>
             </footer>
