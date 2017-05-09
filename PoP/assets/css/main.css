@@ -1260,20 +1260,20 @@ body {
 
 /* Gallery */
 
-	.gallery {
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: -ms-flex;
-		display: flex;
-        color:#39454b
-		-moz-flex-wrap: wrap;
-		-webkit-flex-wrap: wrap;
-		-ms-flex-wrap: wrap;
-		flex-wrap: wrap;
-		width: 45em;
-		max-width: 100%;
-		margin: 0 auto 2em auto;
-	}
+.gallery {
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	/*color:#39454b*/
+	-moz-flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	width: 45em;
+	max-width: 100%;
+	margin: 0 auto 2em auto;
+}
 
 		.gallery article {
 			-moz-transition: -moz-transform 1s ease, opacity 1s ease;
@@ -1669,17 +1669,17 @@ body {
 
 /* Header */
 
-#header {
-    position: fixed;
-    z-index: 10000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    background: url("https://ak5.picdn.net/shutterstock/videos/3045703/thumb/6.jpg");
-    height: 3em;
-    line-height: 3em;
-    box-shadow: 0 0 0.15em 0 rgba(0, 0, 0, 0.1);
-}
+		#header {
+			position: fixed;
+			z-index: 10000;
+			left: 0;
+			top: 0;
+			width: 100%;
+			background: url("http://cdn.wonderfulengineering.com/wp-content/uploads/2013/12/metal-wallpaper-6.jpg");
+			height: 3em;
+			line-height: 3em;
+			box-shadow: 0 0 0.15em 0 rgba(0, 0, 0, 0.1);
+		}
 
 		#header h1 {
 			position: absolute;
@@ -1690,6 +1690,10 @@ body {
 			cursor: default;
 		}
 
+		#header img {
+			position: absolute;
+		    margin: 10px;
+		}
 			#header h1 a {
 				font-size: 1.25em;
 			}
@@ -1886,7 +1890,7 @@ body {
 			}
 
 			.main.style3.primary {
-				background-image:url("https://dvdiwg-ch3301.files.1drv.com/y4mFQbsqB1M4gvGz5zo5H1DTyC6DA3Vk40bfPLz_fZbajTn1TPUPn6f8yXru9ej_gR-KfLzlKPiKgRrRwWKKzRv0-2JqLYfQlmq_3ABW2C86TF5xGCkkw7cczNBKhvUD_IqnfIvmRzfJt-tckJQh-O6t7AUezUrDaWGLJoY-Taya6OgGmNbt5CGmN5_dwda7R82PGZeaKgvR6oF-N3FPrXhkA?width=1920&height=1200&cropmode=none");
+				background-image: url("https://reykjavikuniversity-my.sharepoint.com/personal/jonb11_ru_is/_layouts/15/guestaccess.aspx?docid=1d926dc5f0d59473192a5cdb302c8bf57&authkey=ARbSc6XOeac8yemvO22FdA4");
 			}
 
 			.main.style3.secondary {
@@ -1993,20 +1997,20 @@ body {
 			.main > .content {
 				max-width: calc(100% - 1.5em);
 			}
-
+		   
 		}
 
 /* Footer */
 
-	#footer {
-		position: relative;
-		height: 5em;
-		line-height: 5em;
-		margin: 0;
-		background: #39454b;
-		color: rgba(185, 186, 187, 0.5);
-		overflow: hidden;
-	}
+		#footer {
+			position: relative;
+			height: 5em;
+			line-height: 5em;
+			margin: 0;
+			background: url("http://cdn.wonderfulengineering.com/wp-content/uploads/2013/12/metal-wallpaper-6.jpg");
+			color: rgba(185, 186, 187, 0.5);
+			overflow: hidden;
+		}
 
 		#footer a {
 			color: inherit;
@@ -2097,13 +2101,13 @@ body {
 
 /* Intro */
 
-	#intro {
-		background: url("https://bvbd5g-ch3301.files.1drv.com/y4myfIDO4--3IoW3JwS_aqAEVM8oSPQWnnbKxsPitMyaaUyUsC6JQ774E4kX9LzStOZk811VPscLnGmRSiXQYFq3zX_mrNzS9FRIL602_-tM3ARvLHWHjPoL61Kf7XiWusvVRBqXsnTjt2PCxIsbV1ZTKdW0eAmlKkElXGYvX43nT0nHK_tJqszHfdNrIbXc27O66bY4OozEGCbzD7_x37paw?width=1400&height=715&cropmode=none");
-		background-size: 1080px, 1080px;
-		background-attachment: fixed, fixed;
-		background-position: top left, bottom center;
-		background-repeat: repeat, no-repeat;
-	}
+#intro {
+	background: url("https://reykjavikuniversity-my.sharepoint.com/personal/jonb11_ru_is/_layouts/15/guestaccess.aspx?docid=13420f4cdde3b4f8e877f1cdfb963e981&authkey=AUjkxtGBx4NHJPHsDiNfCjA");
+	background-size: 1400px, 715px;
+	background-attachment: fixed, fixed;
+	background-position: top left, bottom center;
+	background-repeat: repeat, no-repeat;
+}
 
 /* One */
 
@@ -2116,12 +2120,12 @@ body {
 
 /* Two */
 
-	#two {
-		background: url("https://evdhwg-ch3301.files.1drv.com/y4mbtY7z9_z91qmA3JLQJNUvby8i6Y-Wj1kFdK93m0oBZjlfDdWqAx3ofjGVmoqXc6BooZ6Lb0p9w8bRkbhq035FwExXZ2KySJ-OWDtFU0N5ntDMT4B1g_QPbv15leUlLAUpCvFP1qm53eSGHLf_96bPeeQz2SlFpcgSXcr7tzTbzO2i6xENY5wt381R8Ee1ZAJ7RHWf-LgxBs9j6ZwUmZUjg?width=1920&height=1024&cropmode=none"); 
-		background-size: 256px 256px, cover;
-		background-attachment: fixed, fixed;
-		background-position: top left, center center;
-	}
+#two {
+	background: url("https://reykjavikuniversity-my.sharepoint.com/personal/jonb11_ru_is/_layouts/15/guestaccess.aspx?docid=111a1f1675d894cc488f0b51f976c89e8&authkey=AWOQUmAcgqEnCC_QNcskcBA");
+	background-size: 1900px, 1000px;
+	background-attachment: fixed, fixed;
+	background-position: top left, center center;
+}
    
 
 /* Contact */
