@@ -6,13 +6,14 @@
     <title>@ViewBag.Title - PoP Program on PoP</title>
     <link rel="stylesheet" href="~/assets/css/main.css" />
     <style type="text/css" media="screen"></style>
+    <link rel="stylesheet" href="~/assets/css/manualchange.css" />
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
 <body>
     <header id="header">
-      <!--  <img src="https://reykjavikuniversity-my.sharepoint.com/personal/jonb11_ru_is/_layouts/15/guestaccess.aspx?docid=1480616fa14eb4f528e20023e874972af&authkey=AdtpsofNZbQdtZ4HwEkuD3k" width="77" height="44" /> -->
+        <img src="https://reykjavikuniversity-my.sharepoint.com/personal/jonb11_ru_is/_layouts/15/guestaccess.aspx?docid=1480616fa14eb4f528e20023e874972af&authkey=AdtpsofNZbQdtZ4HwEkuD3k" width="77" height="44" />
         <nav>
             <ul>
                 <li>@Html.ActionLink("Home", "Index", "Home")</li>
@@ -54,3 +55,25 @@
     @RenderSection("scripts", required: false)
 </body>
 </html>
+
+<!--
+<div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("{POP}", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Text Editor", "Index", "TextEditor")</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>    
+-->

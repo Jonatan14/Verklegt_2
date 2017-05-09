@@ -7,8 +7,9 @@
 <header id="haeder">
 
 </header>
-<div id="editor">
- @ViewBag.Code
+<div id="editorContainer">
+<div id="editor"></div>
+    <!--ViewBag.Code;-->
 </div>    
 
 @using (Html.BeginForm("SaveCode", "TextEditor", FormMethod.Post))
@@ -30,7 +31,8 @@
     var editor = ace.edit("editor");
     editor.setTheme("ace/theme/monokai");
     editor.getSession().setMode("ace/mode/javascript");
-
+    //editor.resize();
+    // þetta er ehv sem er voða fancy en það virkar ekki heh
     $("form").submit(function () {
         $("#hidden_editor").val(editor.getSession().getValue());
     });
