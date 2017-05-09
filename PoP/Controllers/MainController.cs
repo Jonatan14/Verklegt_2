@@ -25,9 +25,24 @@ namespace PoP.Controllers
         {
             return View();
         }
+        private void CreateAdmin()
+        {
+            IdentityManager manager = new IdentityManager();
+            if (!manager.RoleExists("Administrators"))
+            {
+                manager.CreateRole("Administrators");
+            }
+            if (!manager.UserExists("admin"))
+            {
+                ApplicationUser newAdmin = new ApplicationUser();
+                newAdmin.UserName = "admin";
+                manager.CreateUser(newAdmin, "123456");
+                manager.AddUserToRole(newAdmin.Id, "Administrators");
+            }
+        }
 
-        // GET: Main/Details/5
-        public ActionResult Details(string id)
+// GET: Main/Details/5
+public ActionResult Details(string id)
         {
             if (id == null)
             {
