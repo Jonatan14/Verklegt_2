@@ -21,10 +21,12 @@ namespace PoP.Controllers
         {
             return View();
         }
+       // [Authorize] // þegar log in virkar fyrir skil þarf að uncommenta !!!Authorize!!!
         public ActionResult Projectpage()
         {
             return View();
         }
+        // Þetta er Admin fallið herna inni sjáið þið admin pw og username
         private void CreateAdmin()
         {
             IdentityManager manager = new IdentityManager();
