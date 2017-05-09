@@ -9,7 +9,7 @@
 
 /* Reset */
 
-	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	html, body, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 		margin: 0;
 		padding: 0;
 		border: 0;
@@ -624,7 +624,7 @@ body {
 
 		}
 #pall{
-	color:black;
+	color: white;
 }
 
 /* Button */
@@ -1257,38 +1257,41 @@ body {
 			}
 
 		}
+/*About us*/
 
 /* Gallery */
 
-.gallery {
-	display: -moz-flex;
-	display: -webkit-flex;
-	display: -ms-flex;
-	display: flex;
-	/*color:#39454b*/
-	-moz-flex-wrap: wrap;
-	-webkit-flex-wrap: wrap;
-	-ms-flex-wrap: wrap;
-	flex-wrap: wrap;
-	width: 45em;
-	max-width: 100%;
-	margin: 0 auto 2em auto;
-}
+			.gallery {
+				display: -moz-flex;
+				display: -webkit-flex;
+				display: -ms-flex;
+				display: flex;
+				-moz-flex-wrap: wrap;
+				-webkit-flex-wrap: wrap;
+				-ms-flex-wrap: wrap;
+				flex-wrap: wrap;
+				width: 45em;
+				max-width: 100%;
+				margin: 0 auto 2em auto;
+            }
 
-		.gallery article {
-			-moz-transition: -moz-transform 1s ease, opacity 1s ease;
-			-webkit-transition: -webkit-transform 1s ease, opacity 1s ease;
-			-ms-transition: -ms-transform 1s ease, opacity 1s ease;
-			transition: transform 1s ease, opacity 1s ease;
-			-moz-transform: translateX(0);
-			-webkit-transform: translateX(0);
-			-ms-transform: translateX(0);
-			transform: translateX(0);
-			width: 50%;
-			position: relative;
-			opacity: 1.0;
-		}
+            .gallery div {
+                color: black;
+            }
 
+                .gallery article {
+                    -moz-transition: -moz-transform 1s ease, opacity 1s ease;
+                    -webkit-transition: -webkit-transform 1s ease, opacity 1s ease;
+                    -ms-transition: -ms-transform 1s ease, opacity 1s ease;
+                    transition: transform 1s ease, opacity 1s ease;
+                    -moz-transform: translateX(0);
+                    -webkit-transform: translateX(0);
+                    -ms-transform: translateX(0);
+                    transform: translateX(0);
+                    width: 50%;
+                    position: relative;
+                    opacity: 1.0;
+                }
 			.gallery article .image {
 				margin: 0;
 				display: block;
@@ -1692,7 +1695,7 @@ body {
 
 		#header img {
 			position: absolute;
-		    margin: 10px;
+			margin: 10px;
 		}
 			#header h1 a {
 				font-size: 1.25em;
