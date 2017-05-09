@@ -7,12 +7,9 @@ using System.Web.Mvc;
 
 namespace PoP.Service
 {
-	public class FileService : Controller
+	public class FileService
 	{
-		ApplicationDbContext context = new ApplicationDbContext();
 		
-		
-		private FileModel file = null;
 
 		
 		public FileModel getFile(int id)
@@ -26,9 +23,25 @@ namespace PoP.Service
 			}
 		}
 
-		public FileModel updateFile(FileModel file)
+		public void updateFile(FileModel file)
 		{
-			return file;
+			using (ApplicationDbContext context = new ApplicationDbContext())
+			{
+				FileModel dbFile = context.Files
+					.Where(i => i.id == file.id)
+					.FirstOrDefault();
+
+				if (dbFile != null)
+				{
+					context.Entry(dbFile).CurrentValues.SetValues(file);
+				}
+				else
+				{
+					context.Files.Add(file);
+				}
+
+				context.SaveChanges();
+			}
 		}
 
 		public int getFileVersion(FileModel model)

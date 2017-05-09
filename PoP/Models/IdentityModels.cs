@@ -17,6 +17,7 @@ namespace PoP.Models
 			return userIdentity;
 		}
 	}
+	
 
 	public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
 	{
@@ -33,6 +34,6 @@ namespace PoP.Models
 			return new ApplicationDbContext();
 		}
 
-		public System.Data.Entity.DbSet<PoP.Models.ApplicationUser> ApplicationUsers { get; set; }
+		
 	}
 }
