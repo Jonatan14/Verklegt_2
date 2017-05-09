@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using PoP.Service;
 
 namespace PoP.Controllers
 {
@@ -12,7 +13,14 @@ namespace PoP.Controllers
         // GET: TextEditor
         public ActionResult Index()
         {
-            //ViewBag.Code = "alert('Hallo World!');";
+			using (ApplicationDbContext context = new ApplicationDbContext())
+			{
+				context.Add(new FileModel());
+				context.SaveChanges();
+			}
+			FileService _file = new FileService();
+			FileModel model = _file.getFile(1);
+            ViewBag.Code = "alert('Hallo World!');";
             ViewBag.DocumentID = 1; // þarf að breita úr hardkóða í eitthvað sem nær í viðeigandi gögn í gagnagrun.
 
             return View();
