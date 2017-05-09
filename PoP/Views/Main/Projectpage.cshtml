@@ -2,55 +2,34 @@
 @{
     ViewBag.Title = "Projectpage";
 }
-
-
 <div class="flex-container">
-    <div class="flex-item">flex item 1</div>
+    <div class="flex-item">
+        <table>
+            <tr>
+                <th>3</th>
+                <th onclick="sortTable(0)">Project</th>
+                <th onclick="sortTable(1)">Date</th>
+                <th onclick="sortTable(2)">Owner</th>
+            </tr>
+            <tbody>
+                <tr>
+                    <td>2</td>
+                    <td>Webpage 1</td>
+                    <td>01/01/01</td>
+                    <td>Your project</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Webpage 2</td>
+                    <td>01/01/02</td>
+                    <td>Your project</td>
+                </tr>
+           </tbody>
+        </table>
+    </div>
     <div class="flex-item3">
         <div class="flex-item2"></div>
         <div class="flex-item2"></div>
         <div class="flex-item2"></div>
-
     </div>
-
 </div>
-
-<style>
-    .flex-container {
-        display: -webkit-flex;
-        display: flex;
-        -webkit-align-items: stretch;
-        align-items: stretch;
-        flex-warp: warp;
-        background-color: lightgrey;
-    }
-
-    .flex-item3 {
-        background-color: cornflowerblue;
-        width: 200px;
-        margin: 10px;
-    }
-
-    .flex-item {
-        background-color: cornflowerblue;
-        width: 800px;
-        margin: 10px;
-    }
-
-    .flex-container2 {
-        display: -webkit-flex;
-        display: flex;
-        -webkit-flex-direction: column-reverse;
-        flex-direction: column-reverse;
-        width: 400px;
-        margin: 10;
-        background-color: gray;
-    }
-
-    .flex-item2 {
-        background-color: Black;
-        width: 100px;
-        height: 100px;
-        margin: 10px;
-    }
-</style>
