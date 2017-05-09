@@ -21,6 +21,10 @@ namespace PoP.Controllers
         {
             return View();
         }
+        public ActionResult Projectpage()
+        {
+            return View();
+        }
 
         // GET: Main/Details/5
         public ActionResult Details(string id)
