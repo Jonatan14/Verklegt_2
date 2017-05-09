@@ -16,7 +16,7 @@
 		font-size: 100%;
 		font: inherit;
 		vertical-align: baseline;
-        color:snow;
+		color:snow;
 	}
 
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -67,11 +67,11 @@
 		height: 100%;
 	}
 
-	body {
-		background-image:url("https://d1bd5g-ch3301.files.1drv.com/y4mVB2HZ_IDn0xuPYl066WA_t1pxaJ-diOt_ZIBVip16hMZlP7Luc_-HfK3Ne1aOY3-8EPw7mPtsis-P7tvbuXwKJPzq9dYPfRpvpE-LTJt37LKgSWXqjVIgw0KdMuwLanzYue9ZIZPqXQ08681x0fa8APt6IW0kqIBivyXiCTvCZoT2za2QlqpNuV6-AyKKUqOtuc5yOGCJRWFgNrtaS5NEQ?width=1400&height=788&cropmode=none");
-		height: 100%;
-		min-width: 320px;
-	}
+body {
+	background-image: url("https://reykjavikuniversity-my.sharepoint.com/personal/jonb11_ru_is/_layouts/15/guestaccess.aspx?docid=169031779671d4b1f9355b5dffeac80c6&authkey=AXx3bX1SMWMTOyVHRpgV5Fg");
+	height: 100%;
+	min-width: 320px;
+}
 
 		body.is-loading *, body.is-loading *:before, body.is-loading *:after {
 			-moz-animation: none !important;
@@ -624,7 +624,7 @@
 
 		}
 #pall{
-    color:black;
+	color:black;
 }
 
 /* Button */
@@ -1265,6 +1265,7 @@
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
+        color:#39454b
 		-moz-flex-wrap: wrap;
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
@@ -1668,18 +1669,17 @@
 
 /* Header */
 
-	#header {
-		position: fixed;
-		z-index: 10000;
-		left: 0;
-		top: 0;
-		width: 100%;
-		background: #b091eb;
-		height: 3em;
-		line-height: 3em;
-		box-shadow: 0 0 0.15em 0 rgba(0, 0, 0, 0.1);
-       
-	}
+#header {
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: url("https://ak5.picdn.net/shutterstock/videos/3045703/thumb/6.jpg");
+    height: 3em;
+    line-height: 3em;
+    box-shadow: 0 0 0.15em 0 rgba(0, 0, 0, 0.1);
+}
 
 		#header h1 {
 			position: absolute;
@@ -2099,7 +2099,7 @@
 
 	#intro {
 		background: url("https://bvbd5g-ch3301.files.1drv.com/y4myfIDO4--3IoW3JwS_aqAEVM8oSPQWnnbKxsPitMyaaUyUsC6JQ774E4kX9LzStOZk811VPscLnGmRSiXQYFq3zX_mrNzS9FRIL602_-tM3ARvLHWHjPoL61Kf7XiWusvVRBqXsnTjt2PCxIsbV1ZTKdW0eAmlKkElXGYvX43nT0nHK_tJqszHfdNrIbXc27O66bY4OozEGCbzD7_x37paw?width=1400&height=715&cropmode=none");
-		background-size: 256px 256px, cover;
+		background-size: 1080px, 1080px;
 		background-attachment: fixed, fixed;
 		background-position: top left, bottom center;
 		background-repeat: repeat, no-repeat;
@@ -2107,17 +2107,17 @@
 
 /* One */
 
-	#one {
-		background: url("https://blbk5g-ch3301.files.1drv.com/y4maV-f2e-Dh7pFjcOBpaKexpsJmcvtzzMVqVq5HLaVAVroVrk9Pd0kjtA0p7bkbfxnzX7UghH2iXsxpRtUm4UyoKYCUlmsYh-nfU9trFgWeGw44eY3SGrWZ6Pzp2C5-qy5LRIWbKeMbkrlu1q5YBL8HPDTljMomsJX0KQAS2sk194KEd_h8RAg45OAHsGBVTYZHaWx4eybA6eYL2rIAZzP8Q?width=1400&height=736&cropmode=none");
-		background-size: 256px 256px, cover;
-		background-attachment: fixed, fixed;
-		background-position: top left, center center;
-	}
+#one {
+	background: url("https://reykjavikuniversity-my.sharepoint.com/personal/jonb11_ru_is/_layouts/15/guestaccess.aspx?docid=10e7a4c42df584d84a9b8789ab44d29a4&authkey=AZmUnwR-qXVweOzXPJWrqtI");
+	background-size: 1080px, 1080px;
+	background-attachment: fixed, fixed;
+	background-position: top left, center center;
+}
 
 /* Two */
 
 	#two {
-        background: url("https://evdhwg-ch3301.files.1drv.com/y4mbtY7z9_z91qmA3JLQJNUvby8i6Y-Wj1kFdK93m0oBZjlfDdWqAx3ofjGVmoqXc6BooZ6Lb0p9w8bRkbhq035FwExXZ2KySJ-OWDtFU0N5ntDMT4B1g_QPbv15leUlLAUpCvFP1qm53eSGHLf_96bPeeQz2SlFpcgSXcr7tzTbzO2i6xENY5wt381R8Ee1ZAJ7RHWf-LgxBs9j6ZwUmZUjg?width=1920&height=1024&cropmode=none"); 
+		background: url("https://evdhwg-ch3301.files.1drv.com/y4mbtY7z9_z91qmA3JLQJNUvby8i6Y-Wj1kFdK93m0oBZjlfDdWqAx3ofjGVmoqXc6BooZ6Lb0p9w8bRkbhq035FwExXZ2KySJ-OWDtFU0N5ntDMT4B1g_QPbv15leUlLAUpCvFP1qm53eSGHLf_96bPeeQz2SlFpcgSXcr7tzTbzO2i6xENY5wt381R8Ee1ZAJ7RHWf-LgxBs9j6ZwUmZUjg?width=1920&height=1024&cropmode=none"); 
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
@@ -2129,7 +2129,7 @@
 	#contact {
 		overflow: hidden;
 		padding-bottom: 0;
-        background-color: aliceblue;
+		background-color: aliceblue;
 	}
 
 		#contact .box {
