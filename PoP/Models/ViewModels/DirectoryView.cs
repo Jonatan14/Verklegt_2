@@ -7,8 +7,11 @@ namespace PoP.Models.ViewModels
 {
     public class DirectoryView
     {
-        public AccountModel model()
+        private string UserName { get; set; }
+
+        public FolderModel model()
         {
+            
             return null;
         }
 
