@@ -21,19 +21,36 @@ namespace PoP.Controllers
         {
             return View();
         }
+       // [Authorize] // þegar log in virkar fyrir skil þarf að uncommenta !!!Authorize!!!
         public ActionResult Projectpage()
         {
             return View();
         }
+        // Þetta er Admin fallið herna inni sjáið þið admin pw og username
+        private void CreateAdmin()
+        {
+            IdentityManager manager = new IdentityManager();
+            if (!manager.RoleExists("Administrators"))
+            {
+                manager.CreateRole("Administrators");
+            }
+            if (!manager.UserExists("admin"))
+            {
+                ApplicationUser newAdmin = new ApplicationUser();
+                newAdmin.UserName = "admin";
+                manager.CreateUser(newAdmin, "123456");
+                manager.AddUserToRole(newAdmin.Id, "Administrators");
+            }
+        }
 
-        // GET: Main/Details/5
-        public ActionResult Details(string id)
+// GET: Main/Details/5
+public ActionResult Details(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ApplicationUser applicationUser = db.ApplicationUsers.Find(id);
+            ApplicationUser applicationUser = db.Users.Find(id);
             if (applicationUser == null)
             {
                 return HttpNotFound();
@@ -56,7 +73,7 @@ namespace PoP.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.ApplicationUsers.Add(applicationUser);
+                db.Users.Add(applicationUser);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -71,7 +88,7 @@ namespace PoP.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ApplicationUser applicationUser = db.ApplicationUsers.Find(id);
+            ApplicationUser applicationUser = db.Users.Find(id);
             if (applicationUser == null)
             {
                 return HttpNotFound();
@@ -102,7 +119,7 @@ namespace PoP.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ApplicationUser applicationUser = db.ApplicationUsers.Find(id);
+            ApplicationUser applicationUser = db.Users.Find(id);
             if (applicationUser == null)
             {
                 return HttpNotFound();
@@ -115,8 +132,8 @@ namespace PoP.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
-            ApplicationUser applicationUser = db.ApplicationUsers.Find(id);
-            db.ApplicationUsers.Remove(applicationUser);
+            ApplicationUser applicationUser = db.Users.Find(id);
+            db.Users.Remove(applicationUser);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
