@@ -44,11 +44,6 @@ namespace PoP.Service
 			}
 		}
 
-		public int getFileVersion(FileModel model)
-		{
-			int version = 0;
-			return version;
-		}
 
 		public bool isNewest(FileModel model)
 		{
