@@ -12,6 +12,16 @@
                 <th onclick="sortTable(2)">Owner</th>
             </tr>
             <tbody>
+                @foreach (var FolderModel in ViewBag.Folders)
+                {
+                    <tr>
+                    <tr>
+                        <td>@FolderModel.id</td>
+                        <td>@FolderModel.name</td>
+                        <td>01/01/01</td>
+                        <td>Your project</td>
+                    </tr>
+                </tr>}
                 <tr>
                     <td>2</td>
                     <td>Webpage 1</td>

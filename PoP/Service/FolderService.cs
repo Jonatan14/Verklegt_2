@@ -40,10 +40,13 @@ namespace PoP.Service
 			}
 		}
 
-		public List<FolderModel> filesInDirector(int id)
+		public List<FolderModel> foldersOwnedByUser(int id)
 		{
-			List<FolderModel> result = null;
-			return result;
+			using (ApplicationDbContext context = new ApplicationDbContext())
+			{
+				List<FolderModel> folderList = context.Folders.Where(i => i.id > 0).ToList();
+				return folderList;
+			}
 		}
 	}
 }
