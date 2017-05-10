@@ -16,7 +16,7 @@
 		font-size: 100%;
 		font: inherit;
 		vertical-align: baseline;
-		color:snow;
+		color:black;
 	}
 
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -828,7 +828,7 @@ body {
 		width: 100%;
 		padding: 0.65em 0.75em;
 		background: none;
-		border: solid 2px #e5e6e7;
+		border: solid 2px #000000;
 		color: inherit;
 		border-radius: 0.5em;
 		outline: none;
@@ -842,7 +842,7 @@ body {
 		input[type="url"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #9ac8e9;
+			border-color: #801eb5;
 		}
 
 	input[type="text"],
@@ -1722,7 +1722,7 @@ body {
 
 					#header nav ul li a {
 						display: block;
-						color: inherit;
+						color: snow;
 						text-decoration: none;
 						height: 3em;
 						line-height: 3em;
@@ -2017,7 +2017,7 @@ body {
 		}
 
 		#footer a {
-			color: inherit;
+			color: snow;
 		}
 
 			#footer a:hover {
