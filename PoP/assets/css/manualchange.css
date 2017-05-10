@@ -30,6 +30,9 @@
         overflow: scroll;
         width: 800px;
         margin: 10px;
+        background-color: lightgray;
+        opacity: 0.8;
+        
     }
 
     .flex-container2 {
@@ -39,7 +42,6 @@
         flex-direction: column-reverse;
         width: 400px;
         margin: 10;
-        
     }
 
     .flex-item2 {
@@ -63,4 +65,19 @@ td, th {
 
 tr:nth-child(even) {
     background-color: #dddddd;
+}
+
+.flex-item th{
+    background: url("http://cdn.wonderfulengineering.com/wp-content/uploads/2013/12/metal-wallpaper-6.jpg");
+    color: white;
+    font-weight: bold;
+    opacity: 1;
+}
+
+.flex-item td{
+    color: black;
+}
+
+tbody tr:hover{
+    background-color: #52465b;
 }
