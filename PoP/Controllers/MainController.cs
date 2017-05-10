@@ -50,7 +50,7 @@ public ActionResult Details(string id)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ApplicationUser applicationUser = db.ApplicationUsers.Find(id);
+            ApplicationUser applicationUser = db.Users.Find(id);
             if (applicationUser == null)
             {
                 return HttpNotFound();
@@ -73,7 +73,7 @@ public ActionResult Details(string id)
         {
             if (ModelState.IsValid)
             {
-                db.ApplicationUsers.Add(applicationUser);
+                db.Users.Add(applicationUser);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -88,7 +88,7 @@ public ActionResult Details(string id)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ApplicationUser applicationUser = db.ApplicationUsers.Find(id);
+            ApplicationUser applicationUser = db.Users.Find(id);
             if (applicationUser == null)
             {
                 return HttpNotFound();
@@ -119,7 +119,7 @@ public ActionResult Details(string id)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ApplicationUser applicationUser = db.ApplicationUsers.Find(id);
+            ApplicationUser applicationUser = db.Users.Find(id);
             if (applicationUser == null)
             {
                 return HttpNotFound();
@@ -132,8 +132,8 @@ public ActionResult Details(string id)
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
-            ApplicationUser applicationUser = db.ApplicationUsers.Find(id);
-            db.ApplicationUsers.Remove(applicationUser);
+            ApplicationUser applicationUser = db.Users.Find(id);
+            db.Users.Remove(applicationUser);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

@@ -8,17 +8,36 @@ namespace PoP.Service
 {
 	public class FolderService
 	{
-		private FolderModel folder = null;
 
 		public FolderModel getFolder(int id)
 		{
-			return folder;
+			using (ApplicationDbContext context = new ApplicationDbContext())
+			{
+				return context.Folders
+					.Where(i => i.id == id)
+					.FirstOrDefault();
+			}
 		}
 
-		public FolderModel updateFolder(FolderModel file)
+		public void updateFolder(FolderModel folder)
 		{
+			using (ApplicationDbContext context = new ApplicationDbContext())
+			{
+				FolderModel dbFolder = context.Folders
+					.Where(i => i.id == folder.id)
+					.FirstOrDefault();
 
-			return folder;
+				if (dbFolder != null)
+				{
+					context.Entry(dbFolder).CurrentValues.SetValues(folder);
+				}
+				else
+				{
+					context.Folders.Add(folder);
+				}
+
+				context.SaveChanges();
+			}
 		}
 
 		public List<FolderModel> filesInDirector(int id)

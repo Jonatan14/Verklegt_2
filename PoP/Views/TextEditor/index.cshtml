@@ -8,8 +8,10 @@
 
 </header>
 <div id="editorContainer">
-<div id="editor"></div>
-    <!--ViewBag.Code;-->
+<div id="editor">
+    @ViewBag.Code
+</div>
+   
 </div>    
 
 @using (Html.BeginForm("SaveCode", "TextEditor", FormMethod.Post))
