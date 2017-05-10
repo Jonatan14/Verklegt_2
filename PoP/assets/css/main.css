@@ -623,8 +623,9 @@ body {
 				}
 
 		}
-#pall{
-	color: white;
+	#pall {
+		color: white;
+		font-size: 88px;
 }
 
 /* Button */
@@ -2034,7 +2035,7 @@ body {
 
 			#footer ul.actions li {
 				border-left-color: rgba(185, 186, 187, 0.2);
-                font-size: 0.9em;
+				font-size: 0.9em;
 				margin: 0;
 			}
 
