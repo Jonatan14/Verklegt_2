@@ -273,6 +273,12 @@
     <Content Include="Images\fulls\05.jpg" />
     <Content Include="Images\fulls\06.jpg" />
     <Content Include="Images\intro.jpg" />
+    <Content Include="Images\Icons\1494445777_TrashBin.png" />
+    <Content Include="Images\Icons\1494445835_editor-folder-add-glyph.png" />
+    <Content Include="Images\Icons\1494445838_editor-document-file-add-2-outline-stroke.png" />
+    <Content Include="Images\Icons\1494445892_icons_share.png" />
+    <Content Include="Images\Icons\1494445928_file-download.png" />
+    <Content Include="Images\Icons\1494445932_ic_file_upload_48px.png" />
     <Content Include="Images\one.jpg" />
     <Content Include="Images\POPtransParent.png" />
     <Content Include="Images\thumbs\01.jpg" />
