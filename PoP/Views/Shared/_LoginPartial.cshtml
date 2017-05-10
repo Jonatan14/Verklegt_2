@@ -17,13 +17,14 @@
 }
 else
 {
+    <ul class="nav-justified btn btn-success btn-lg">
+
+        <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+    </ul>
+
     <ul class="nav-justified btn btn-danger btn-lg ">
             <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" }) <br /></li>
             
     </ul>
    
-    <ul class="nav-justified btn btn-success btn-lg">
-
-        <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
-    </ul>
 }
