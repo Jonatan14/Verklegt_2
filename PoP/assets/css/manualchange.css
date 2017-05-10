@@ -11,30 +11,26 @@
     left: 0;
 }
 
- .flex-container {
-        display: -webkit-flex;
-        display: flex;
-        -webkit-align-items: stretch;
-        align-items: stretch;
-        flex-warp: warp;
-       
-    }
 
-    .flex-item3 {
-        background-color: transparent;
-        border-width: 5px;
-        border-style: groove;
-        border-color: #625750;
-        width: 290px;
-        height: 400px;
-        margin: 10px;
+ .flex-container {
+        position: relative;
+        margin: 0 auto;
+	    display: -webkit-flex;
+        display: flex;
+	    -webkit-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-direction: row;
+        height: 500px;
+
         
     }
 
+   
+
     .flex-item {
-        overflow: scroll;
-        width: 800px;
-        height: 400px;
+        overflow-y: scroll;
+        display: block;   
+        width: 75%;
         margin: 10px;
         background-color: lightgray;  
     }
@@ -44,7 +40,7 @@
         display: flex;
         -webkit-flex-direction: column-reverse;
         flex-direction: column-reverse;
-        width: 400px;
+        width: 20%;
         margin: 10;
     }
 
@@ -85,7 +81,22 @@ tbody tr:hover{
     background-color: #52465b;
 }
 
-.new{
-    color: black;
-    margin-top: 10px;
-}
+
+
+
+ .flex-item3 {
+    background: url("http://cdn.wonderfulengineering.com/wp-content/uploads/2013/12/metal-wallpaper-6.jpg");
+    display: inline;
+    padding: 12px;
+    text-decoration: none;
+    width: 20%;
+    }
+
+  .flex-child a:hover{
+      background-color: #ccc;
+      padding: 10px 10px 10px 10px;
+  }
+
+ .new{
+     filter: invert(100%);
+ }
