@@ -2007,7 +2007,7 @@ body {
 
 		#footer {
 			position: relative;
-			height: 10em;
+			height: 5em;
 			line-height: 5em;
 			margin: 0;
 			background: url("http://cdn.wonderfulengineering.com/wp-content/uploads/2013/12/metal-wallpaper-6.jpg");
@@ -2059,7 +2059,7 @@ body {
 		@media screen and (max-width: 1000px) {
 
 			#footer {
-				height: auto;
+				height: 10px;
 				line-height: inherit;
 				text-align: center;
 				padding: 2em 1em 2em 1em;
