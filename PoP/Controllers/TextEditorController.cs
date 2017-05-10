@@ -17,8 +17,15 @@ namespace PoP.Controllers
 			
 			FileService _file = new FileService();
 			FileModel model = _file.getFile(1);
-			ViewBag.Code = model.content;
-			ViewBag.DocumentID = 1;
+			if(model != null)
+			{ 
+				ViewBag.Code = model.content;
+				ViewBag.DocumentID = 1;
+			}
+			else
+			{
+				ViewBag.DocumentID = 0;
+			}
 			return View();
 		}
 		public ActionResult SaveCode (EditorViewModel model)

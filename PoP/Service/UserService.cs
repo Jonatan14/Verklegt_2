@@ -8,7 +8,7 @@ namespace PoP.Service
 {
 	public class UserService
 	{
-		public int getUserId(string username)
+		public int getUserId(int Id)
 		{
 			//TODO: returna id ekki 0. Er bara placeholder
 			return 0;
