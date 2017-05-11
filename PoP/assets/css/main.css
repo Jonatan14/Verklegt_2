@@ -2017,6 +2017,7 @@ body {
 			background: url("http://cdn.wonderfulengineering.com/wp-content/uploads/2013/12/metal-wallpaper-6.jpg");
 			color: rgba(185, 186, 187, 0.5);
 			overflow: hidden;
+		    box-shadow: 0 0 1.15em 0 rgba(60, 25, 25, 10);
 		}
 
 		#footer a {
