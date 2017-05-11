@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using Microsoft.AspNet.SignalR;
+using System.Threading.Tasks;
 
 namespace PoP.Hubs
 {
@@ -16,6 +17,15 @@ namespace PoP.Hubs
         {
             Clients.Group(Convert.ToString(documentID), Context.ConnectionId).OnChange(changeData);
             //Clients.All.OnChange(changeData);
+        }
+        public Task JoinCode(int documentID)
+        {
+            return Groups.Add(Context.ConnectionId, Convert.ToString(documentID));
+        }
+
+        public Task LeaveCode(int documentID)
+        {
+            return Groups.Remove(Context.ConnectionId, Convert.ToString(documentID));
         }
     }
 }

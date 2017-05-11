@@ -26,6 +26,7 @@
 @section scripts{
 <script src="~/Scripts/ace/ace.js" type="text/javascript" charset="utf-8"></script>
 <script src="~/Scripts/jquery.signalR-2.2.2.js"></script>
+<script src="~/Scripts/jquery.signalR-2.2.2.min.js"></script>
 <script src="~/assets/js/manualjava.js"></script>
 <script src="~/signalr/hubs"></script>
 <script>
@@ -41,6 +42,8 @@
     });
 
     var codehub = $.connection.codehub;
+    $.connection.codehub.url = "/signalr"
+    $.connection.codehub.start().done(init);
     var silent = false;
     codehub.client.onChange = function (changeData) {
         console.log(changeData);
@@ -61,5 +64,6 @@
             codehub.server.onChange(obj);
         });
     });
+    var connection = $.hubConnection("/signalr", { useDefaultPath: false });
 </script>
 }
