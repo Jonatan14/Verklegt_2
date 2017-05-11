@@ -40,13 +40,31 @@ namespace PoP.Service
 			}
 		}
 
-		public List<FolderModel> foldersOwnedByUser(int id)
+		public List<FolderModel> foldersOwnedByUser(string id)
 		{
+				
+			List<FolderModel> folderList = new List<FolderModel>();
 			using (ApplicationDbContext context = new ApplicationDbContext())
 			{
-				List<FolderModel> folderList = context.Folders.Where(i => i.id > 0).ToList();
+				
+				string UserID = id;
+				List<int> IDs = context.UsersInProjects.Where(i => i.UserID == UserID).Select(i => i.projectID).ToList();
+
+				for (int k = 0; k < IDs.Count; k++)
+				{
+					int n = IDs[k];
+					FolderModel model = context.Folders
+					.Where(i => i.id == n)
+					.FirstOrDefault();
+					folderList.Add(model);
+				}
 				return folderList;
 			}
 		}
-	}
+
+        internal string updateFolder(List<FolderModel> folderList)
+        {
+            throw new NotImplementedException();
+        }
+    }
 }
