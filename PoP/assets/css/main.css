@@ -16,7 +16,7 @@
 		font-size: 100%;
 		font: inherit;
 		vertical-align: baseline;
-		color:black;
+		color:white;
 	}
 
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -1896,7 +1896,7 @@ body {
 
 			.main.style3.primary {
 				background-image: url("https://reykjavikuniversity-my.sharepoint.com/personal/jonb11_ru_is/_layouts/15/guestaccess.aspx?docid=1d926dc5f0d59473192a5cdb302c8bf57&authkey=ARbSc6XOeac8yemvO22FdA4");
-			    box-shadow: 12px 0 15px 0px rgba(0, 0, 0, 0.8), -12px 0 8px 0px rgba(0, 0, 0, 0.8);
+				box-shadow: 12px 0 15px 0px rgba(0, 0, 0, 0.8), -12px 0 8px 0px rgba(0, 0, 0, 0.8);
 			}
 
 			.main.style3.secondary {
@@ -1934,7 +1934,7 @@ body {
 		@media screen and (max-width: 1920px) {
 
 			.main.style2 .content {
-				width: 80%;
+				width: 70%;
 			}
 
 		}
@@ -1942,7 +1942,7 @@ body {
 		@media screen and (max-width: 1280px) {
 
 			.main.style2 .content {
-				width: 50%;
+				width: 70%;
 			}
 
 		}
@@ -1950,7 +1950,7 @@ body {
 		@media screen and (max-width: 1000px) {
 
 			.main.style2 .content {
-				width: 60%;
+				width: 70%;
 			}
 
 		}
@@ -2110,22 +2110,22 @@ body {
 /* Intro */
 
 #intro {
-    background: url("https://reykjavikuniversity-my.sharepoint.com/personal/jonb11_ru_is/_layouts/15/guestaccess.aspx?docid=13420f4cdde3b4f8e877f1cdfb963e981&authkey=AUjkxtGBx4NHJPHsDiNfCjA");
-    background-size: 1400px, 715px;
-    background-attachment: fixed, fixed;
-    background-position: top left, bottom center;
-    background-repeat: repeat, no-repeat;
-    box-shadow: 12px 0 15px 0px rgba(0, 0, 0, 0.8), -12px 0 8px 0px rgba(0, 0, 0, 0.8);
+	background: url("https://reykjavikuniversity-my.sharepoint.com/personal/jonb11_ru_is/_layouts/15/guestaccess.aspx?docid=13420f4cdde3b4f8e877f1cdfb963e981&authkey=AUjkxtGBx4NHJPHsDiNfCjA");
+	background-size: 1400px, 715px;
+	background-attachment: fixed, fixed;
+	background-position: top left, bottom center;
+	background-repeat: repeat, no-repeat;
+	box-shadow: 12px 0 15px 0px rgba(0, 0, 0, 0.8), -12px 0 8px 0px rgba(0, 0, 0, 0.8);
 }
 
 /* One */
 
 #one {
-    background: url("https://reykjavikuniversity-my.sharepoint.com/personal/jonb11_ru_is/_layouts/15/guestaccess.aspx?docid=10e7a4c42df584d84a9b8789ab44d29a4&authkey=AZmUnwR-qXVweOzXPJWrqtI");
-    background-size: 1080px, 1080px;
-    background-attachment: fixed, fixed;
-    background-position: top left, center center;
-    box-shadow: 12px 0 15px 0px rgba(0, 0, 0, 0.8), -12px 0 8px 0px rgba(0, 0, 0, 0.8);
+	background: url("https://reykjavikuniversity-my.sharepoint.com/personal/jonb11_ru_is/_layouts/15/guestaccess.aspx?docid=10e7a4c42df584d84a9b8789ab44d29a4&authkey=AZmUnwR-qXVweOzXPJWrqtI");
+	background-size: 1080px, 1080px;
+	background-attachment: fixed, fixed;
+	background-position: top left, center center;
+	box-shadow: 12px 0 15px 0px rgba(0, 0, 0, 0.8), -12px 0 8px 0px rgba(0, 0, 0, 0.8);
 }
 
 /* Two */
@@ -2134,14 +2134,13 @@ body {
 	background-size: 1900px, 1000px;
 	background-attachment: fixed, fixed;
 	background-position: top left, center center;
-    box-shadow: 12px 0 15px 0px rgba(0, 0, 0, 0.8), -12px 0 8px 0px rgba(0, 0, 0, 0.8);
+	box-shadow: 12px 0 15px 0px rgba(0, 0, 0, 0.8), -12px 0 8px 0px rgba(0, 0, 0, 0.8);
 }
-.w3link a:link {
-    color: red;
-}
-    .w3link a:hover{
-        color: #511;
+    #red {
+        color: #f55;
+        font-weight: bold;
     }
+}
    
 
 /* Contact */
