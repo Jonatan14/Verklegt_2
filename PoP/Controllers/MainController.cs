@@ -160,14 +160,14 @@ namespace PoP.Controllers
 		private FileService _file = new FileService();
 		// GET: TextEditor
 		[Authorize]
-		public ActionResult TextEdit()
+		public ActionResult TextEdit(int id)
 		{
-			List<FileModel> fileList = _file.filesInProject(1);
+			List<FileModel> fileList = _file.filesInProject(id);
 
 			ViewBag.files = fileList;
 
 
-			FileModel model = _file.getFile(1);
+			FileModel model = _file.getFile(id);
 			if (model != null)
 			{
 				ViewBag.Code = model.content;
@@ -179,6 +179,7 @@ namespace PoP.Controllers
 			}
 			return View();
 		}
+
 		public ActionResult SaveCode(EditorViewModel model)
 		{
 			FileModel fModel = new FileModel();
