@@ -12,7 +12,7 @@ namespace PoP.Controllers
 	{
 		private FileService _file = new FileService();
 		// GET: TextEditor
-		[Authorize]
+		//[Authorize]
 		public ActionResult Index()
 		{
 			List<FileModel> fileList = _file.filesInProject(1);

@@ -13,12 +13,11 @@
             <tbody>
                 @foreach (var FolderModel in ViewBag.Folders)
                 {
-                    <tr>
-                    <tr>
+                    <tr >@Html.ActionLink("Edit Project", "TextEdit", new { id = FolderModel.id })
                         <td>@FolderModel.id</td>
                         <td>@FolderModel.name</td>
                         <td>Your project</td>
-                    </tr>
+                        
                 </tr>}
            </tbody>
         </table>
@@ -57,3 +56,10 @@
     </div>
 </div>
 
+<script>
+    $('tr').click(function () {
+        window.location = $(this).find('a').attr('href');
+    }).hover(function () {
+        $(this).toggleClass('hover');
+    });
+</script>
