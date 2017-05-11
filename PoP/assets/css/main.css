@@ -1029,6 +1029,7 @@ body {
 
 	header {
 		margin-bottom: 1em;
+
 	}
 
 		header p {
@@ -1038,7 +1039,7 @@ body {
 		}
 
 	footer {
-		margin-top: 2em;
+		margin-top: 1em;
 	}
 
 /* Table */

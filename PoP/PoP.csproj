@@ -248,6 +248,10 @@
     <Compile Include="Migrations\201705111630067_asdf.Designer.cs">
       <DependentUpon>201705111630067_asdf.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705112248193_as.cs" />
+    <Compile Include="Migrations\201705112248193_as.Designer.cs">
+      <DependentUpon>201705112248193_as.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModel.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -765,6 +769,7 @@
     <Content Include="Views\Main\Edit.cshtml" />
     <Content Include="Views\Main\Index.cshtml" />
     <Content Include="Views\Main\Projectpage.cshtml" />
+    <Content Include="Views\Main\TextEdit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -783,6 +788,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705111630067_asdf.resx">
       <DependentUpon>201705111630067_asdf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705112248193_as.resx">
+      <DependentUpon>201705112248193_as.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
