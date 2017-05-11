@@ -48,5 +48,10 @@ namespace PoP.Service
 				return folderList;
 			}
 		}
-	}
+
+        internal string updateFolder(List<FolderModel> folderList)
+        {
+            throw new NotImplementedException();
+        }
+    }
 }

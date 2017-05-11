@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using PoP.Models;
 using PoP.Service;
+using System.IO;
 
 namespace PoP.Controllers
 {
@@ -64,27 +65,22 @@ public ActionResult Details(string id)
 		}
 
 		// GET: Main/Create
-		public ActionResult Create()
+	/*	public ActionResult Create()
 		{
 			return View();
-		}
+		}*/
 
 		// POST: Main/Create
 		// To protect from overposting attacks, please enable the specific properties you want to bind to, for 
 		// more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-		[HttpPost]
-		[ValidateAntiForgeryToken]
-		public ActionResult Create([Bind(Include = "Id,Email,EmailConfirmed,PasswordHash,SecurityStamp,PhoneNumber,PhoneNumberConfirmed,TwoFactorEnabled,LockoutEndDateUtc,LockoutEnabled,AccessFailedCount,UserName")] ApplicationUser applicationUser)
+		public ActionResult Create()
 		{
-			if (ModelState.IsValid)
-			{
-				db.Users.Add(applicationUser);
-				db.SaveChanges();
-				return RedirectToAction("Index");
-			}
+            FolderService service = new FolderService();
+            List<FolderModel> folderList = service.foldersOwnedByUser(1);
+            Directory.CreateDirectory(service.updateFolder(folderList));
 
-			return View(applicationUser);
-		}
+            return View();
+        }
 
 		// GET: Main/Edit/5
 		public ActionResult Edit(string id)
