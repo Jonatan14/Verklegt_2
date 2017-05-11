@@ -24,7 +24,7 @@ namespace PoP.Controllers
 			if(model != null)
 			{ 
 				ViewBag.Code = model.content;
-				ViewBag.DocumentID = 1;
+				ViewBag.DocumentID = model.id;
 			}
 			else
 			{
@@ -34,6 +34,15 @@ namespace PoP.Controllers
 		}
 		public ActionResult SaveCode (EditorViewModel model)
 		{
+            FileModel fModel = new FileModel();
+            fModel.content = model.Content;
+            fModel.id = 1;
+
+            FileService service = new FileService();
+            service.updateFile(fModel);
+
+            ViewBag.code = fModel.content;
+            
 			return View("Index");
 		}
 	}
