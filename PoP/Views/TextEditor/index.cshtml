@@ -13,6 +13,21 @@
 </div>
    
 </div>    
+<div id="fileList">
+    <table class="mytable">
+        <thead id="tableHead">
+            <th onclick="sortTable(0)">Filename</th>
+        </thead>
+        <tbody>
+            @foreach (var FileModel in ViewBag.files)
+            {
+                <tr>
+                    <td>@FileModel.name</td>
+                </tr>}
+        </tbody>
+    </table>
+</div>
+
 
 @using (Html.BeginForm("SaveCode", "TextEditor", FormMethod.Post))
 {

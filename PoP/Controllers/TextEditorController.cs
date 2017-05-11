@@ -10,12 +10,16 @@ namespace PoP.Controllers
 {
 	public class TextEditorController : Controller
 	{
+		private FileService _file = new FileService();
 		// GET: TextEditor
+		[Authorize]
 		public ActionResult Index()
 		{
+			List<FileModel> fileList = _file.filesInProject(1);
 
-			
-			FileService _file = new FileService();
+			ViewBag.files = fileList;
+
+
 			FileModel model = _file.getFile(1);
 			if(model != null)
 			{ 
