@@ -24,10 +24,12 @@ namespace PoP.Controllers
 	   // [Authorize] // þegar log in virkar fyrir skil þarf að uncommenta !!!Authorize!!!
 		public ActionResult Projectpage()
 		{
-
-			FolderService service = new FolderService();
-			List<FolderModel> folderList = service.foldersOwnedByUser(1);
 			
+			
+			FolderService service = new FolderService();
+
+			List<FolderModel> folderList = service.foldersOwnedByUser(1);
+
 			ViewBag.Folders = folderList;
 			return View();
 		}
