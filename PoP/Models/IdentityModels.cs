@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using System.Collections.Generic;
+using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
@@ -21,9 +22,12 @@ namespace PoP.Models
 
 	public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
 	{
-		public DbSet<FileModel>		Files		{get; set;}
-		public DbSet<FolderModel>	Folders		{get; set;}
-		public DbSet<AccountModel>	Accounts	{get; set;}
+		public DbSet<FileModel>			Files			{get; set;}
+		public DbSet<FolderModel>		Folders			{get; set;}
+		public DbSet<AccountModel>		Accounts		{get; set;}
+		public DbSet<UsersInProjects> UsersInProjects { get; set; }
+		public DbSet<FIlesInProjectModel> FilesInProjectModel { get; set; }
+
 		public ApplicationDbContext()
 			: base("DefaultConnection", throwIfV1Schema: false)
 		{
