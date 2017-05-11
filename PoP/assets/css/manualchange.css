@@ -11,7 +11,6 @@
     left: 0;
 }
 
-
  .flex-container {
         position: relative;
         margin: 0 auto;
@@ -20,12 +19,8 @@
 	    -webkit-flex-direction: row;
         flex-direction: row;
         -webkit-flex-direction: row;
-        height: 500px;
-
-        
+        height: 500px;  
     }
-
-   
 
     .flex-item {
         overflow-y: scroll;
@@ -81,6 +76,7 @@ tbody tr:hover{
     background-color: #52465b;
 }
 
+
  .flex-item3 {
     background: url("http://cdn.wonderfulengineering.com/wp-content/uploads/2013/12/metal-wallpaper-6.jpg");
     display: inline;
@@ -105,3 +101,8 @@ tbody tr:hover{
  .new{
      filter: invert(100%);
  }
+
+.new{
+    color: black;
+    margin-top: 10px;
+}
