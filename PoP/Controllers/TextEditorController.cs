@@ -24,7 +24,7 @@ namespace PoP.Controllers
 			if(model != null)
 			{ 
 				ViewBag.Code = model.content;
-				ViewBag.DocumentID = model.id;
+				ViewBag.DocumentID = 1;
 			}
 			else
 			{
