@@ -10,17 +10,21 @@ namespace PoP.Controllers
 {
 	public class TextEditorController : Controller
 	{
+		private FileService _file = new FileService();
 		// GET: TextEditor
+		[Authorize]
 		public ActionResult Index()
 		{
+			List<FileModel> fileList = _file.filesInProject(1);
 
-			
-			FileService _file = new FileService();
+			ViewBag.files = fileList;
+
+
 			FileModel model = _file.getFile(1);
 			if(model != null)
 			{ 
 				ViewBag.Code = model.content;
-				ViewBag.DocumentID = 1;
+				ViewBag.DocumentID = model.id;
 			}
 			else
 			{
@@ -30,6 +34,15 @@ namespace PoP.Controllers
 		}
 		public ActionResult SaveCode (EditorViewModel model)
 		{
+            FileModel fModel = new FileModel();
+            fModel.content = model.Content;
+            fModel.id = 1;
+
+            FileService service = new FileService();
+            service.updateFile(fModel);
+
+            ViewBag.code = fModel.content;
+            
 			return View("Index");
 		}
 	}
