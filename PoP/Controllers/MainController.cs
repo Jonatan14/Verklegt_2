@@ -8,7 +8,11 @@ using System.Web;
 using System.Web.Mvc;
 using PoP.Models;
 using PoP.Service;
+<<<<<<< HEAD
 using System.IO;
+=======
+using Microsoft.AspNet.Identity;
+>>>>>>> 3ec4f4d8aa2df0d2a65766fac01102bd7a01d4cd
 
 namespace PoP.Controllers
 {
@@ -25,10 +29,12 @@ namespace PoP.Controllers
 	   // [Authorize] // þegar log in virkar fyrir skil þarf að uncommenta !!!Authorize!!!
 		public ActionResult Projectpage()
 		{
-
-			FolderService service = new FolderService();
-			List<FolderModel> folderList = service.foldersOwnedByUser(1);
 			
+			
+			FolderService service = new FolderService();
+
+			List<FolderModel> folderList = service.foldersOwnedByUser(User.Identity.GetUserId());
+
 			ViewBag.Folders = folderList;
 			return View();
 		}

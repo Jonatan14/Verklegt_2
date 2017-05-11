@@ -8,11 +8,27 @@
 
 </header>
 <div id="editorContainer">
-<div id="editor">
+<div id="editor" style="color: white;">
     @ViewBag.Code
 </div>
    
 </div>    
+<div id="fileList">
+    <table class="mytable">
+        <thead id="tableHead">
+            <th onclick="sortTable(0)">Filename</th>
+        </thead>
+        <tbody>
+            @foreach (var FileModel in ViewBag.files)
+            {
+                <tr>
+                   
+                    <td>@FileModel.name</td>
+                </tr>}
+        </tbody>
+    </table>
+</div>
+
 
 @using (Html.BeginForm("SaveCode", "TextEditor", FormMethod.Post))
 {
@@ -26,8 +42,12 @@
 @section scripts{
 <script src="~/Scripts/ace/ace.js" type="text/javascript" charset="utf-8"></script>
 <script src="~/Scripts/jquery.signalR-2.2.2.js"></script>
-<script src="~/assets/js/manualjava.js"></script>
+<script src="~/Scripts/jquery.signalR-2.2.2.min.js"></script>
 <script src="~/signalr/hubs"></script>
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/assets/js/manualjava.js"></script>
+
+
 <script>
     var documentID = @ViewBag.DocumentID;
 
@@ -40,7 +60,7 @@
         $("#hidden_editor").val(editor.getSession().getValue());
     });
 
-    var codehub = $.connection.codehub;
+    var codehub = $.connection.Codehub;
     var silent = false;
     codehub.client.onChange = function (changeData) {
         console.log(changeData);
@@ -54,12 +74,13 @@
         codeHub.server.joinDocumentID(documentID);
 
         editor.on("change", function (obj) {
-            if(silent){
+            if(silent)
+            {
                 return;
             }
             console.log(obj);
-            codehub.server.onChange(obj);
+            codehub.server.onChange(obj, documentID);
         });
-    });
+    }); 
 </script>
 }

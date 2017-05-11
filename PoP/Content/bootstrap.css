@@ -2218,7 +2218,8 @@ fieldset[disabled] .btn-danger.active {
   border-color: #4cae4c;
 }
 
-.btn-success:hover,
+.
+-success:hover,
 .btn-success:focus,
 .btn-success:active,
 .btn-success.active,
@@ -3945,7 +3946,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .nav-justified {
-  width: 100%;
+  width: 17%;
 }
 
 .nav-justified > li {
