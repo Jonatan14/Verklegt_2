@@ -25,11 +25,21 @@ namespace PoP.Service
 
 		internal List<FileModel> filesInProject(int id)
 		{
-
+			List<FileModel> fileList = new List<FileModel>();
 			using (ApplicationDbContext context = new ApplicationDbContext())
 			{
 				
-				List<FileModel> fileList = context.Files.Where(i => i.id > 0).ToList();
+				List<int> IDs = context.FilesInProjectModel.Where(i => i.projectID == id).Select(i => i.fileID).ToList();
+
+				for (int k = 0; k < IDs.Count; k++)
+				{
+					int n = IDs[k];
+					FileModel model = context.Files
+					.Where(i => i.id == n)
+					.FirstOrDefault();
+					fileList.Add(model);
+				}
+				
 				return fileList;
 			}
 		}
