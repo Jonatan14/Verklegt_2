@@ -52,8 +52,8 @@ namespace PoP.Controllers
 			}
 		}
 
-// GET: Main/Details/5
-public ActionResult Details(string id)
+		// GET: Main/Details/5	
+		public ActionResult Details(string id)
 		{
 			if (id == null)
 			{
@@ -79,7 +79,7 @@ public ActionResult Details(string id)
 		public ActionResult Create()
 		{
 			FolderService service = new FolderService();
-			List<FolderModel> folderList = service.foldersOwnedByUser(1);
+			List<FolderModel> folderList = service.foldersOwnedByUser(User.Identity.GetUserId());
 			Directory.CreateDirectory(service.updateFolder(folderList));
 
 			return View();
