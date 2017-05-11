@@ -25,8 +25,10 @@ namespace PoP.Service
 
 		internal List<FileModel> filesInProject(int id)
 		{
+
 			using (ApplicationDbContext context = new ApplicationDbContext())
 			{
+				
 				List<FileModel> fileList = context.Files.Where(i => i.id > 0).ToList();
 				return fileList;
 			}

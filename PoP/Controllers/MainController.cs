@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using PoP.Models;
 using PoP.Service;
+using Microsoft.AspNet.Identity;
 
 namespace PoP.Controllers
 {
@@ -28,7 +29,7 @@ namespace PoP.Controllers
 			
 			FolderService service = new FolderService();
 
-			List<FolderModel> folderList = service.foldersOwnedByUser(1);
+			List<FolderModel> folderList = service.foldersOwnedByUser(User.Identity.GetUserId());
 
 			ViewBag.Folders = folderList;
 			return View();
