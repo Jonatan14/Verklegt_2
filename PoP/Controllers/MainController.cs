@@ -8,11 +8,8 @@ using System.Web;
 using System.Web.Mvc;
 using PoP.Models;
 using PoP.Service;
-<<<<<<< HEAD
 using System.IO;
-=======
 using Microsoft.AspNet.Identity;
->>>>>>> 3ec4f4d8aa2df0d2a65766fac01102bd7a01d4cd
 
 namespace PoP.Controllers
 {
@@ -81,12 +78,12 @@ public ActionResult Details(string id)
 		// more details see http://go.microsoft.com/fwlink/?LinkId=317598.
 		public ActionResult Create()
 		{
-            FolderService service = new FolderService();
-            List<FolderModel> folderList = service.foldersOwnedByUser(1);
-            Directory.CreateDirectory(service.updateFolder(folderList));
+			FolderService service = new FolderService();
+			List<FolderModel> folderList = service.foldersOwnedByUser(1);
+			Directory.CreateDirectory(service.updateFolder(folderList));
 
-            return View();
-        }
+			return View();
+		}
 
 		// GET: Main/Edit/5
 		public ActionResult Edit(string id)
