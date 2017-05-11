@@ -80,8 +80,18 @@ tr:nth-child(even) {
 tbody tr:hover{
     background-color: #52465b;
 }
+ .flex-item3 {
+    background: url("http://cdn.wonderfulengineering.com/wp-content/uploads/2013/12/metal-wallpaper-6.jpg");
+    display: inline;
+    padding: 12px;
+    text-decoration: none;
+    width: 20%;
+    }
 
+  .flex-child a:hover{
+      background-color: #ccc;
+      padding: 10px 10px 10px 10px;
+  }
 .new{
-    color: black;
-    margin-top: 10px;
+  filter: invert(100%);
 }
