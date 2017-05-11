@@ -72,7 +72,7 @@
 
     $.connection.hub.start().done(function () {
 
-        codehub.server.joinDocumentID(documentID);
+        codehub.server.joinDocument(documentID);
 
         editor.on("change", function (obj) {
             if(silent)
