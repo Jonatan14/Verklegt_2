@@ -56,21 +56,5 @@ namespace PoP.Service
 		}
 
 
-		public bool isNewest(FileModel model)
-		{
-			return true;
-		}
-
-		public int activeEditorsCount(FileModel model)
-		{
-			int count = 0;
-			return count;
-		}
-
-		public List<AccountModel>activeEditors()
-		{
-			List<AccountModel> modelList = null;
-			return modelList;
-		}
 	}
 }
