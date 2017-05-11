@@ -21,9 +21,13 @@ namespace PoP.Controllers
 		// GET: Main
 		public ActionResult Index()
 		{
+			if((System.Web.HttpContext.Current.User != null) && System.Web.HttpContext.Current.User.Identity.IsAuthenticated)
+			{
+				return RedirectToAction("Projectpage", "Main");
+			}
 			return View();
 		}
-	   // [Authorize] // þegar log in virkar fyrir skil þarf að uncommenta !!!Authorize!!!
+		[Authorize] // þegar log in virkar fyrir skil þarf að uncommenta !!!Authorize!!!
 		public ActionResult Projectpage()
 		{
 			
@@ -31,8 +35,11 @@ namespace PoP.Controllers
 			FolderService service = new FolderService();
 
 			List<FolderModel> folderList = service.foldersOwnedByUser(User.Identity.GetUserId());
-
-			ViewBag.Folders = folderList;
+			if (folderList != null)
+			{
+				ViewBag.Folders = folderList;
+			}
+			else { ViewBag.Folders = null; }
 			return View();
 		}
 		// Þetta er Admin fallið herna inni sjáið þið admin pw og username
@@ -149,6 +156,44 @@ namespace PoP.Controllers
 				db.Dispose();
 			}
 			base.Dispose(disposing);
+		}
+		private FileService _file = new FileService();
+		// GET: TextEditor
+		[Authorize]
+		public ActionResult TextEdit()
+		{
+			List<FileModel> fileList = _file.filesInProject(1);
+
+			ViewBag.files = fileList;
+
+
+			FileModel model = _file.getFile(1);
+			if (model != null)
+			{
+				ViewBag.Code = model.content;
+				ViewBag.DocumentID = 1;
+			}
+			else
+			{
+				ViewBag.DocumentID = 0;
+			}
+			return View();
+		}
+		public ActionResult SaveCode(EditorViewModel model)
+		{
+			FileModel fModel = new FileModel();
+			fModel.content = model.Content;
+			fModel.id = 1;
+
+			FileService service = new FileService();
+			service.updateFile(fModel);
+
+			if (fModel != null)
+			{
+				ViewBag.code = fModel.content;
+			}
+			else { }
+			return RedirectToAction("index", "TextEditor");
 		}
 	}
 }
