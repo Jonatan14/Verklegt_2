@@ -162,8 +162,8 @@ namespace PoP.Controllers
 		[Authorize]
 		public ActionResult TextEdit(int id)
 		{
-            ViewBag.ProjectID = id;
-            List<FileModel> fileList = _file.filesInProject(id);
+			ViewBag.ProjectID = id;
+			List<FileModel> fileList = _file.filesInProject(id);
 
 			ViewBag.files = fileList;
 
@@ -172,7 +172,7 @@ namespace PoP.Controllers
 			if (model != null)
 			{
 				ViewBag.Code = model.content;
-                ViewBag.DocumentID = model.id;
+				ViewBag.DocumentID = model.id;
 			}
 			else
 			{
@@ -187,12 +187,13 @@ namespace PoP.Controllers
             List<FileModel> fileList = _file.filesInProject(id);
             ViewBag.files = fileList;
 
-            FileModel model = _file.getFile(modelID);
 
-            ViewBag.ProjectID = id;
-            ViewBag.Code = model.content;
-            ViewBag.DocumentID = model.id;
-            return View();
+			FileModel model = _file.getFile(modelID);
+
+			ViewBag.ProjectID = id;
+			ViewBag.Code = model.content;
+			ViewBag.DocumentID = model.id;
+			return View();
 		}
 		public ActionResult SaveCode(EditorViewModel model)
 		{
@@ -243,4 +244,5 @@ namespace PoP.Controllers
             return View(model);
         }
     }
+
 }

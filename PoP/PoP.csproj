@@ -235,7 +235,6 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MainController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\TextEditorController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -762,7 +761,6 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\TextEditor\index.cshtml" />
     <Content Include="Views\Main\Create.cshtml" />
     <Content Include="Views\Main\Delete.cshtml" />
     <Content Include="Views\Main\Details.cshtml" />
