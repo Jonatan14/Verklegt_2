@@ -180,8 +180,8 @@ namespace PoP.Controllers
 			}
 			return View();
 		}
-        
-		public ActionResult TextEdit(int id, int modelID)
+
+		public ActionResult OpenFile(int id, int modelID)
 		{
             //Svissar á milli file-a innan projects.
             List<FileModel> fileList = _file.filesInProject(id);
@@ -213,6 +213,29 @@ namespace PoP.Controllers
 
                 FolderService sfolder = new FolderService();
                 sfolder.createFolder(newFolder, User.Identity.GetUserId());
+
+                return RedirectToAction("Index");
+            }
+
+            return View(model);
+        }
+
+        public ActionResult MakeFile()
+        {
+            
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult MakeFile(FileModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                FileModel newFile = new FileModel();
+                newFile.name = model.name;
+
+                
+               // _file.createFile(newFile, projectID);
 
                 return RedirectToAction("Index");
             }

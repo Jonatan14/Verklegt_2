@@ -772,6 +772,7 @@
     <Content Include="Views\Main\TextEdit.cshtml" />
     <Content Include="Views\Main\OpenFile.cshtml" />
     <Content Include="Views\Main\CreateProject.cshtml" />
+    <Content Include="Views\Main\MakeFile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

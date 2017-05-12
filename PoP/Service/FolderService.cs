@@ -46,10 +46,20 @@ namespace PoP.Service
                         .OrderByDescending(p => p.id)
                         .Select(r => r.id)
                         .First().ToString());
+                value++;
                 UsersInProjects connection = new UsersInProjects();
                 connection.projectID = value;
                 connection.UserID = userID;
                 context.UsersInProjects.Add(connection);
+
+                FileModel indexFile = new FileModel();
+
+                indexFile.name = "index.js";
+                indexFile.type = "javascript";
+                indexFile.content = "alert('Hello word');";
+                FileService serv = new FileService();
+                serv.createFile(indexFile, value);
+
 
                 context.SaveChanges();
             }
@@ -73,6 +83,7 @@ namespace PoP.Service
 					.FirstOrDefault();
 					folderList.Add(model);
 				}
+
 				return folderList;
 			}
 		}
