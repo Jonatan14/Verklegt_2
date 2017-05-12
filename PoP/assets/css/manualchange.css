@@ -27,7 +27,7 @@
         display: block;   
         width: 75%;
         margin: 10px;
-        background-color: lightgray;  
+        background-color: #555555;  
     }
 
     .flex-container2 {
@@ -59,7 +59,7 @@ td, th {
 }
 
 tr:nth-child(even) {
-    background-color: #dddddd;
+    background-color: #6d674c;
 }
 
 .flex-item th{
@@ -70,6 +70,7 @@ tr:nth-child(even) {
 
 .flex-item td{
     color: black;
+    font-weight: bold;
 }
 
 tbody tr:hover{

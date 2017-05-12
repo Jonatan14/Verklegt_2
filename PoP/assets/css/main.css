@@ -650,7 +650,8 @@ h2 {
 		background-color: #98c593;
 		border: 0;
 		border-radius: 3.5em;
-		color: #ffffff;
+		color: #000000;
+        font-weight: bold;
 		cursor: pointer;
 		display: inline-block;
 		height: 3.5em;
@@ -863,7 +864,9 @@ h2 {
 	select {
 		line-height: 1.35em;
 	    background-color: #bababb;
-	}
+	    color: black;
+        font-weight: bold;
+    }
 
 	textarea {
 		min-height: 8em;
