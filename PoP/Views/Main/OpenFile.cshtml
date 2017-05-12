@@ -21,7 +21,7 @@
             {
                 <tr>
                     <td>
-                        @Html.ActionLink("Edit file", "OpenFile", new { id = ViewBag.ProjectID}, new { model = FileModel.id })
+                        @Html.ActionLink("Edit file", "OpenFile", new { id = ViewBag.ProjectID, modelID = FileModel.id })
                     </td>
                     <td>@FileModel.name</td>
                 </tr>}

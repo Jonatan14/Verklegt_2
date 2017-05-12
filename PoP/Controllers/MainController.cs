@@ -168,7 +168,7 @@ namespace PoP.Controllers
 			ViewBag.files = fileList;
 
 
-            FileModel model = fileList[0];
+			FileModel model = fileList[0];
 			if (model != null)
 			{
 				ViewBag.Code = model.content;
@@ -180,10 +180,10 @@ namespace PoP.Controllers
 			}
 			return View();
 		}
-
-		[ActionName("OpenFile")]
+        
 		public ActionResult TextEdit(int id, int modelID)
 		{
+            //Svissar á milli file-a innan projects.
             List<FileModel> fileList = _file.filesInProject(id);
             ViewBag.files = fileList;
 
@@ -198,5 +198,26 @@ namespace PoP.Controllers
 		{
 			return RedirectToAction("index", "TextEditor");
 		}
-	}
+        [HttpGet]
+        public ActionResult CreateProject()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult CreateProject(FolderModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                FolderModel newFolder = new FolderModel();
+                newFolder.name = model.name;
+
+                FolderService sfolder = new FolderService();
+                sfolder.createFolder(newFolder, User.Identity.GetUserId());
+
+                return RedirectToAction("Index");
+            }
+
+            return View(model);
+        }
+    }
 }

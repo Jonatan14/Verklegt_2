@@ -31,16 +31,31 @@ namespace PoP.Service
 				{
 					context.Entry(dbFolder).CurrentValues.SetValues(folder);
 				}
-				else
-				{
-					context.Folders.Add(folder);
-				}
+
 
 				context.SaveChanges();
 			}
 		}
+        public void createFolder(FolderModel folder, string userID)
+        {
+            using (ApplicationDbContext context = new ApplicationDbContext())
+            {
 
-		public List<FolderModel> foldersOwnedByUser(string id)
+                context.Folders.Add(folder);
+                int value = int.Parse(context.Folders
+                        .OrderByDescending(p => p.id)
+                        .Select(r => r.id)
+                        .First().ToString());
+                UsersInProjects connection = new UsersInProjects();
+                connection.projectID = value;
+                connection.UserID = userID;
+                context.UsersInProjects.Add(connection);
+
+                context.SaveChanges();
+            }
+        }
+
+        public List<FolderModel> foldersOwnedByUser(string id)
 		{
 				
 			List<FolderModel> folderList = new List<FolderModel>();
