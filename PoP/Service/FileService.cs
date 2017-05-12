@@ -70,7 +70,7 @@ namespace PoP.Service
             {
 
                 context.Files.Add(file);
-                int value = int.Parse(context.Folders
+                int value = int.Parse(context.Files
                         .OrderByDescending(p => p.id)
                         .Select(r => r.id)
                         .First().ToString());
