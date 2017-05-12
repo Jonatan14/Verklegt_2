@@ -227,23 +227,26 @@ namespace PoP.Controllers
 
             return View(model);
         }
-
-        public ActionResult MakeFile()
+		
+        public ActionResult MakeFile(int projectID)
         {
-            
-            return View();
+			ViewBag.pID = projectID;
+
+			return View();
         }
 
         [HttpPost]
         public ActionResult MakeFile(FileModel model)
         {
+			
             if (ModelState.IsValid)
             {
                 FileModel newFile = new FileModel();
                 newFile.name = model.name;
+				
 
                 
-               // _file.createFile(newFile, projectID);
+				_file.createFile(newFile, model.id);
 
                 return RedirectToAction("Index");
             }

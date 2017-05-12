@@ -15,7 +15,7 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>FileModel</h4>
+        <h4>Create a new file</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
@@ -25,12 +25,10 @@
             <div class="col-md-10">
                 @Html.EditorFor(model => model.name, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.name, "", new { @class = "text-danger" })
+                <input type="hidden" name="id" value="@ViewBag.pID" />
             </div>
         </div>
-        
-        <div>
-            @ViewBag.projectID
-        </div>
+
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
