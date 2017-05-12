@@ -31,16 +31,41 @@ namespace PoP.Service
 				{
 					context.Entry(dbFolder).CurrentValues.SetValues(folder);
 				}
-				else
-				{
-					context.Folders.Add(folder);
-				}
+
 
 				context.SaveChanges();
 			}
 		}
+        public void createFolder(FolderModel folder, string userID)
+        {
+            using (ApplicationDbContext context = new ApplicationDbContext())
+            {
 
-		public List<FolderModel> foldersOwnedByUser(string id)
+                context.Folders.Add(folder);
+                int value = int.Parse(context.Folders
+                        .OrderByDescending(p => p.id)
+                        .Select(r => r.id)
+                        .First().ToString());
+                value++;
+                UsersInProjects connection = new UsersInProjects();
+                connection.projectID = value;
+                connection.UserID = userID;
+                context.UsersInProjects.Add(connection);
+
+                FileModel indexFile = new FileModel();
+
+                indexFile.name = "index.js";
+                indexFile.type = "javascript";
+                indexFile.content = "alert('Hello word');";
+                FileService serv = new FileService();
+                serv.createFile(indexFile, value);
+
+
+                context.SaveChanges();
+            }
+        }
+
+        public List<FolderModel> foldersOwnedByUser(string id)
 		{
 				
 			List<FolderModel> folderList = new List<FolderModel>();
@@ -58,6 +83,7 @@ namespace PoP.Service
 					.FirstOrDefault();
 					folderList.Add(model);
 				}
+
 				return folderList;
 			}
 		}

@@ -8,7 +8,7 @@
             <tr id="tableHead">
                 <th>ID</th>
                 <th onclick="sortTable(0)">Project</th>
-                <th onclick="sortTable(2)">Owner</th>
+                <th onclick="sortTable(1)">Owner</th>
             </tr>
             <tbody>
                 @foreach (var FolderModel in ViewBag.Folders)
@@ -28,7 +28,7 @@
         <div class="flex-child">
             <a href="#" class="new" onclick="">
                 <img src="~/Images/Icons/1494445838_editor-document-file-add-2-outline-stroke.png" height="30px" alt="NewFileIcon" />
-                Create new file
+                @Html.ActionLink("Create New Project", "CreateProject")
             </a>
         </div>
         <div class="flex-child">

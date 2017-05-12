@@ -182,11 +182,12 @@ namespace PoP.Controllers
 			return View();
 		}
 
-		[ActionName("OpenFile")]
-		public ActionResult TextEdit(int id, int modelID)
+		public ActionResult OpenFile(int id, int modelID)
 		{
-			List<FileModel> fileList = _file.filesInProject(id);
-			ViewBag.files = fileList;
+            //Svissar á milli file-a innan projects.
+            List<FileModel> fileList = _file.filesInProject(id);
+            ViewBag.files = fileList;
+
 
 			FileModel model = _file.getFile(modelID);
 			ViewBag.Name = model.name;
@@ -205,6 +206,50 @@ namespace PoP.Controllers
 			_file.updateFile(fModel);
 			return View();
 		}
+        [HttpGet]
+        public ActionResult CreateProject()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult CreateProject(FolderModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                FolderModel newFolder = new FolderModel();
+                newFolder.name = model.name;
 
-	}
+                FolderService sfolder = new FolderService();
+                sfolder.createFolder(newFolder, User.Identity.GetUserId());
+
+                return RedirectToAction("Index");
+            }
+
+            return View(model);
+        }
+
+        public ActionResult MakeFile()
+        {
+            
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult MakeFile(FileModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                FileModel newFile = new FileModel();
+                newFile.name = model.name;
+
+                
+               // _file.createFile(newFile, projectID);
+
+                return RedirectToAction("Index");
+            }
+
+            return View(model);
+        }
+    }
+
 }
