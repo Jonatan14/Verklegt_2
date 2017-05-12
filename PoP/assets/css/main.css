@@ -743,6 +743,10 @@ body {
 			.button.style2.down,
 			button.style2.down {
 				background-image: url("images/arrow.svg");
+
+			}
+			.validation-summary-errors ul li{
+				color: #ff5555;
 			}
 
 /* Form */
@@ -2018,7 +2022,7 @@ body {
 			background: url("http://cdn.wonderfulengineering.com/wp-content/uploads/2013/12/metal-wallpaper-6.jpg");
 			color: rgba(185, 186, 187, 0.5);
 			overflow: hidden;
-		    box-shadow: 0 0 1.15em 0 rgba(60, 25, 25, 10);
+			box-shadow: 0 0 1.15em 0 rgba(60, 25, 25, 10);
 		}
 
 		#footer a {
@@ -2112,12 +2116,12 @@ body {
 /* Intro */
 
 #intro {
-    background: url("https://reykjavikuniversity-my.sharepoint.com/personal/jonb11_ru_is/_layouts/15/guestaccess.aspx?docid=13420f4cdde3b4f8e877f1cdfb963e981&authkey=AUjkxtGBx4NHJPHsDiNfCjA");
-    background-size: 1400px, 715px;
-    background-attachment: fixed, fixed;
-    background-position: top left, bottom center;
-    background-repeat: repeat, no-repeat;
-    box-shadow: 12px 0 15px 0px rgba(0, 0, 0, 0.8), -12px 0 8px 0px rgba(0, 0, 0, 0.8);
+	background: url("https://reykjavikuniversity-my.sharepoint.com/personal/jonb11_ru_is/_layouts/15/guestaccess.aspx?docid=13420f4cdde3b4f8e877f1cdfb963e981&authkey=AUjkxtGBx4NHJPHsDiNfCjA");
+	background-size: 1400px, 715px;
+	background-attachment: fixed, fixed;
+	background-position: top left, bottom center;
+	background-repeat: repeat, no-repeat;
+	box-shadow: 12px 0 15px 0px rgba(0, 0, 0, 0.8), -12px 0 8px 0px rgba(0, 0, 0, 0.8);
 }
 
 /* One */
@@ -2138,10 +2142,10 @@ body {
 	background-position: top left, center center;
 	box-shadow: 12px 0 15px 0px rgba(0, 0, 0, 0.8), -12px 0 8px 0px rgba(0, 0, 0, 0.8);
 }
-    #red {
-        color: #f55;
-        font-weight: bold;
-    }
+	#red {
+		color: #f55;
+		font-weight: bold;
+	}
 }
    
 
