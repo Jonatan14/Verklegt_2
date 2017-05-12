@@ -13,14 +13,16 @@
 </div>
 <div id="fileList">
     <table class="mytable">
-        <thead id="tableHead">
+        <tr id="tableHead">
         <th onclick="sortTable(0)">Filename</th>
-        </thead>
+        </tr>
         <tbody>
             @foreach (var FileModel in ViewBag.files)
             {
                 <tr>
-                    
+                    <td>
+                        @Html.ActionLink("Edit file", "OpenFile", new { id = ViewBag.ProjectID}, new { modelID = FileModel.id })
+                    </td>
                     <td>@FileModel.name</td>
                 </tr>}
         </tbody>

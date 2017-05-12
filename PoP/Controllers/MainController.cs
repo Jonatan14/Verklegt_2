@@ -162,16 +162,17 @@ namespace PoP.Controllers
 		[Authorize]
 		public ActionResult TextEdit(int id)
 		{
-			List<FileModel> fileList = _file.filesInProject(id);
+            ViewBag.ProjectID = id;
+            List<FileModel> fileList = _file.filesInProject(id);
 
 			ViewBag.files = fileList;
 
 
-			FileModel model = _file.getFile(id);
+            FileModel model = fileList[0];
 			if (model != null)
 			{
 				ViewBag.Code = model.content;
-				ViewBag.DocumentID = 1;
+                ViewBag.DocumentID = model.id;
 			}
 			else
 			{
@@ -179,26 +180,22 @@ namespace PoP.Controllers
 			}
 			return View();
 		}
-		[ActionName("OpenFile")]
-		public ActionResult TextEdit(int id, FileModel model)
-		{
 
-			return View();
+		[ActionName("OpenFile")]
+		public ActionResult TextEdit(int id, int modelID)
+		{
+            List<FileModel> fileList = _file.filesInProject(id);
+            ViewBag.files = fileList;
+
+            FileModel model = _file.getFile(modelID);
+
+            ViewBag.ProjectID = id;
+            ViewBag.Code = model.content;
+            ViewBag.DocumentID = model.id;
+            return View();
 		}
 		public ActionResult SaveCode(EditorViewModel model)
 		{
-			FileModel fModel = new FileModel();
-			fModel.content = model.Content;
-			fModel.id = 1;
-
-			FileService service = new FileService();
-			service.updateFile(fModel);
-
-			if (fModel != null)
-			{
-				ViewBag.code = fModel.content;
-			}
-			else { }
 			return RedirectToAction("index", "TextEditor");
 		}
 	}

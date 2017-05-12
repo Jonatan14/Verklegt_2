@@ -5,11 +5,11 @@
 <div class="flex-container">
     <div class="flex-item" style="height:100%">
         <table class="myTable">
-            <thead id="tableHead">
+            <tr id="tableHead">
                 <th>ID</th>
                 <th onclick="sortTable(0)">Project</th>
                 <th onclick="sortTable(2)">Owner</th>
-            </thead>
+            </tr>
             <tbody>
                 @foreach (var FolderModel in ViewBag.Folders)
                 {
