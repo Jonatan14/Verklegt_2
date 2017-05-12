@@ -36,36 +36,36 @@ namespace PoP.Service
 				context.SaveChanges();
 			}
 		}
-        public void createFolder(FolderModel folder, string userID)
-        {
-            using (ApplicationDbContext context = new ApplicationDbContext())
-            {
+		public void createFolder(FolderModel folder, string userID)
+		{
+			using (ApplicationDbContext context = new ApplicationDbContext())
+			{
 
-                context.Folders.Add(folder);
-                int value = int.Parse(context.Folders
-                        .OrderByDescending(p => p.id)
-                        .Select(r => r.id)
-                        .First().ToString());
-                value++;
-                UsersInProjects connection = new UsersInProjects();
-                connection.projectID = value;
-                connection.UserID = userID;
-                context.UsersInProjects.Add(connection);
+				context.Folders.Add(folder);
+				int value = int.Parse(context.Folders
+						.OrderByDescending(p => p.id)
+						.Select(r => r.id)
+						.First().ToString());
+				value++;
+				UsersInProjects connection = new UsersInProjects();
+				connection.projectID = value;
+				connection.UserID = userID;
+				context.UsersInProjects.Add(connection);
 
-                FileModel indexFile = new FileModel();
+				FileModel indexFile = new FileModel();
 
-                indexFile.name = "index.js";
-                indexFile.type = "javascript";
-                indexFile.content = "alert('Hello word');";
-                FileService serv = new FileService();
-                serv.createFile(indexFile, value);
+				indexFile.name = "index.js";
+				indexFile.type = "javascript";
+				indexFile.content = "alert('Hello word');";
+				FileService serv = new FileService();
+				serv.createFile(indexFile, value);
 
 
-                context.SaveChanges();
-            }
-        }
+				context.SaveChanges();
+			}
+		}
 
-        public List<FolderModel> foldersOwnedByUser(string id)
+		public List<FolderModel> foldersOwnedByUser(string id)
 		{
 				
 			List<FolderModel> folderList = new List<FolderModel>();
@@ -87,10 +87,26 @@ namespace PoP.Service
 				return folderList;
 			}
 		}
-
-        internal string updateFolder(List<FolderModel> folderList)
-        {
-            throw new NotImplementedException();
-        }
-    }
+		public void addUserToProject(string name, int id)
+		{
+			using (ApplicationDbContext context = new ApplicationDbContext())
+			{
+				ApplicationUser uID = context.Users
+				.Where(i => i.UserName == name)
+				.FirstOrDefault();
+				if (uID != null)
+				{
+					UsersInProjects connection = new UsersInProjects();
+					connection.projectID = id;
+					connection.UserID = uID.Id;
+					context.UsersInProjects.Add(connection);
+				}
+				context.SaveChanges();
+			}
+		}
+		internal string updateFolder(List<FolderModel> folderList)
+		{
+			throw new NotImplementedException();
+		}
+	}
 }

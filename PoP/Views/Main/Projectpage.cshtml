@@ -6,9 +6,9 @@
     <div class="flex-item" style="height:100%">
         <table class="myTable">
             <tr id="tableHead">
-                <th>ID</th>
+                <th></th>
                 <th onclick="sortTable(0)">Project</th>
-                <th onclick="sortTable(1)">Owner</th>
+                <th onclick="sortTable(1)"></th>
             </tr>
             <tbody>
                 @foreach (var FolderModel in ViewBag.Folders)
@@ -18,7 +18,9 @@
                             @Html.ActionLink("Edit Project", "TextEdit", new { id = FolderModel.id })
                         </td>
                         <td>@FolderModel.name</td>
-                        <td>Your project</td>
+                        <td>
+                            @Html.ActionLink("Share project", "AddUserToProject", new { id = FolderModel.id})
+                        </td>
                         
                 </tr>}
            </tbody>

@@ -167,26 +167,28 @@ namespace PoP.Controllers
 
 			ViewBag.files = fileList;
 
-
-			FileModel model = fileList[0];
-			if (model != null)
+			if (fileList.Count != 0)
 			{
-				ViewBag.Code = model.content;
-				ViewBag.DocumentID = model.id;
-				ViewBag.Name = model.name;
+				FileModel model = fileList[0];
+				if (model != null)
+				{
+					ViewBag.Code = model.content;
+					ViewBag.DocumentID = model.id;
+					ViewBag.Name = model.name;
+				}
 			}
 			else
 			{
-				ViewBag.DocumentID = 0;
+				RedirectToAction("MakeFile", id);
 			}
 			return View();
 		}
 
 		public ActionResult OpenFile(int id, int modelID)
 		{
-            //Svissar á milli file-a innan projects.
-            List<FileModel> fileList = _file.filesInProject(id);
-            ViewBag.files = fileList;
+			//Svissar á milli file-a innan projects.
+			List<FileModel> fileList = _file.filesInProject(id);
+			ViewBag.files = fileList;
 
 
 			FileModel model = _file.getFile(modelID);
@@ -206,53 +208,73 @@ namespace PoP.Controllers
 			_file.updateFile(fModel);
 			return View();
 		}
-        [HttpGet]
-        public ActionResult CreateProject()
-        {
-            return View();
-        }
-        [HttpPost]
-        public ActionResult CreateProject(FolderModel model)
-        {
-            if (ModelState.IsValid)
-            {
-                FolderModel newFolder = new FolderModel();
-                newFolder.name = model.name;
+		[HttpGet]
+		public ActionResult CreateProject()
+		{
+			return View();
+		}
+		[HttpPost]
+		public ActionResult CreateProject(FolderModel model)
+		{
+			if (ModelState.IsValid)
+			{
+				FolderModel newFolder = new FolderModel();
+				newFolder.name = model.name;
 
-                FolderService sfolder = new FolderService();
-                sfolder.createFolder(newFolder, User.Identity.GetUserId());
+				FolderService sfolder = new FolderService();
+				sfolder.createFolder(newFolder, User.Identity.GetUserId());
 
-                return RedirectToAction("Index");
-            }
+				return RedirectToAction("Index");
+			}
 
-            return View(model);
-        }
+			return View(model);
+		}
 		
-        public ActionResult MakeFile(int projectID)
-        {
+		public ActionResult MakeFile(int projectID)
+		{
 			ViewBag.pID = projectID;
 
 			return View();
-        }
+		}
 
-        [HttpPost]
-        public ActionResult MakeFile(FileModel model)
-        {
+		[HttpPost]
+		public ActionResult MakeFile(FileModel model)
+		{
 			
-            if (ModelState.IsValid)
-            {
-                FileModel newFile = new FileModel();
-                newFile.name = model.name;
+			if (ModelState.IsValid)
+			{
+				FileModel newFile = new FileModel();
+				newFile.name = model.name;
 				
 
-                
+				
 				_file.createFile(newFile, model.id);
 
-                return RedirectToAction("Index");
-            }
+				return RedirectToAction("Index");
+			}
 
-            return View(model);
-        }
-    }
+			return View(model);
+		}
+		public ActionResult AddUserToProject(int id)
+		{
+			ViewBag.pID = id;
+			return View();
+		}
+		[HttpPost]
+		public ActionResult AddUserToProject(UsersInProjects model)
+		{
+			if (ModelState.IsValid)
+			{
+
+				FolderService service = new FolderService();
+
+				service.addUserToProject(model.UserID, model.id);
+
+				return RedirectToAction("Index");
+			}
+			return View();
+		}
+	}
+
 
 }
