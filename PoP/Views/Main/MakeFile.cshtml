@@ -16,13 +16,10 @@
             <div class="col-md-10">
                 @Html.EditorFor(model => model.name, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.name, "", new { @class = "text-danger" })
-                @Html.HiddenFor(model => model.id, new { id = ViewBag.pID})
+                <input type="hidden" name="id" value="@ViewBag.pID" />
             </div>
         </div>
-        
-        <div>
-            @ViewBag.pID
-        </div>
+
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
