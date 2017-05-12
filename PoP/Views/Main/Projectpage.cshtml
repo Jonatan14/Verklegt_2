@@ -13,8 +13,10 @@
             <tbody>
                 @foreach (var FolderModel in ViewBag.Folders)
                 {
-                    <tr >@Html.ActionLink("Edit Project", "TextEdit", new { id = FolderModel.id })
-                        <td>@FolderModel.id</td>
+                    <tr >
+                        <td>
+                            @Html.ActionLink("Edit Project", "TextEdit", new { id = FolderModel.id })
+                        </td>
                         <td>@FolderModel.name</td>
                         <td>Your project</td>
                         

@@ -179,7 +179,12 @@ namespace PoP.Controllers
 			}
 			return View();
 		}
+		[ActionName("OpenFile")]
+		public ActionResult TextEdit(int id, FileModel model)
+		{
 
+			return View();
+		}
 		public ActionResult SaveCode(EditorViewModel model)
 		{
 			FileModel fModel = new FileModel();
