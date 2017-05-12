@@ -227,11 +227,11 @@ namespace PoP.Controllers
 
             return View(model);
         }
-
-        public ActionResult MakeFile()
+		
+        public ActionResult MakeFile(int projectID)
         {
-            
-            return View();
+			
+            return View(ViewBag.projectID);
         }
 
         [HttpPost]
