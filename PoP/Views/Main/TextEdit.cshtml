@@ -30,9 +30,12 @@
 </div>
 
 
-@using (Html.BeginForm("SaveCode", "TextEdit", FormMethod.Post))
+@using (Html.BeginForm("SaveCode", "main", FormMethod.Post))
 {
     @Html.HiddenFor(m => m.Content, new { @id = "hidden_editor" })
+    @Html.HiddenFor(m => m.projectID, new { @ProjectID = ViewBag.ProjectID })
+    @Html.HiddenFor(m => m.fileID, new { @fileID = ViewBag.DocumentID })
+    @Html.HiddenFor(m => m.name, new { @name = ViewBag.name})
     <input type="submit" value="Save Code" />
 
 }

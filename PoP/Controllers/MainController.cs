@@ -173,6 +173,7 @@ namespace PoP.Controllers
 			{
 				ViewBag.Code = model.content;
 				ViewBag.DocumentID = model.id;
+				ViewBag.Name = model.name;
 			}
 			else
 			{
@@ -188,7 +189,7 @@ namespace PoP.Controllers
 			ViewBag.files = fileList;
 
 			FileModel model = _file.getFile(modelID);
-
+			ViewBag.Name = model.name;
 			ViewBag.ProjectID = id;
 			ViewBag.Code = model.content;
 			ViewBag.DocumentID = model.id;
@@ -196,7 +197,13 @@ namespace PoP.Controllers
 		}
 		public ActionResult SaveCode(EditorViewModel model)
 		{
-			return RedirectToAction("index", "TextEditor");
+			FileModel fModel = new FileModel();
+			fModel.id = model.fileID;
+			fModel.name = model.name;
+			fModel.content = model.Content;
+
+			_file.updateFile(fModel);
+			return View();
 		}
 
 	}
