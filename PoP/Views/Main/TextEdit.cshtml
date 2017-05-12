@@ -1,27 +1,26 @@
 ﻿@model PoP.Models.EditorViewModel
 @{
-    ViewBag.Title = "TextEdit";
+    ViewBag.Title = "index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<header id="haeder">
-
-</header>
+<header id="haeder"></header>
 <div id="editorContainer">
-<div id="editor" style="color: white;">
-    @ViewBag.Code
+    <div id="editor" style="color: white;">
+        @ViewBag.Code
+    </div>
+
 </div>
-   
-</div>    
 <div id="fileList">
     <table class="mytable">
         <thead id="tableHead">
-            <th onclick="sortTable(0)">Filename</th>
+        <th onclick="sortTable(0)">Filename</th>
         </thead>
         <tbody>
             @foreach (var FileModel in ViewBag.files)
             {
                 <tr>
+                    
                     <td>@FileModel.name</td>
                 </tr>}
         </tbody>
@@ -29,9 +28,9 @@
 </div>
 
 
-@using (Html.BeginForm("SaveCode", "Main", FormMethod.Post))
+@using (Html.BeginForm("SaveCode", "TextEdit", FormMethod.Post))
 {
-    @Html.HiddenFor(m => m.Content , new {@id = "hidden_editor" })
+    @Html.HiddenFor(m => m.Content, new { @id = "hidden_editor" })
     <input type="submit" value="Save Code" />
 
 }
@@ -39,15 +38,16 @@
 
 
 @section scripts{
-<script src="~/Scripts/ace/ace.js" type="text/javascript" charset="utf-8"></script>
-<script src="~/Scripts/jquery.signalR-2.2.2.js"></script>
-<script src="~/Scripts/jquery.signalR-2.2.2.min.js"></script>
-<script src="~/signalr/hubs"></script>
-<script src="~/Scripts/jquery-1.10.2.js"></script>
-<script src="~/assets/js/manualjava.js"></script>
+    <script src="~/Scripts/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/assets/js/manualjava.js"></script>
+    <script src="~/Scripts/jquery.signalR-2.2.2.js"></script>
+    <script src="~/Scripts/jquery.signalR-2.2.2.min.js"></script>
+    <script src="~/signalr/hubs"></script>
 
 
-<script>
+
+    <script>
     var documentID = @ViewBag.DocumentID;
 
     var editor = ace.edit("editor");
@@ -81,5 +81,5 @@
             codehub.server.onChange(obj, documentID);
         });
     });
-</script>
+    </script>
 }
