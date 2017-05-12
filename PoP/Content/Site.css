@@ -5,8 +5,9 @@
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 0;
+    padding-right: 0;
+    background: url("https://reykjavikuniversity-my.sharepoint.com/personal/jonb11_ru_is/_layouts/15/guestaccess.aspx?docid=13420f4cdde3b4f8e877f1cdfb963e981&authkey=AUjkxtGBx4NHJPHsDiNfCjA");
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
